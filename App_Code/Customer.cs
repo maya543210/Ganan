@@ -9,6 +9,9 @@ using System.Web;
 public class Customer
 {
     private string customerName;
+    private string customerAdress;
+    private Phone customerPhone;
+
 
 	public Customer()
 	{

@@ -11,10 +11,8 @@ public class Company
     private int companyId; // מספר רץ של החברה
     private int companyCode; // ח.פ. של החברה
     private string companyName; // שם החברה
-    private int areaCode1; // אזור חיוג1
-    private int areaCode2; // אזור חיוג2
-    private int companyTel1; //טלפון1
-    private int companyTel2; //טלפון2
+    private Phone companyPhone1; // מספר טלפון1 
+    private Phone companyPhone2; // מספר טלפון2
     private string companyCity; // עיר של החברה
     private string companyAddress; // כתובת: רחוב, מספר בית
     private bool companyGanan; // גננים?
