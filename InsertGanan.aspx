@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="About.aspx.cs" Inherits="_About" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="InsertGanan.aspx.cs" Inherits="_InsertGanan" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -14,8 +14,8 @@
 				
 				<!-- title -->
 				<div id="page-title">
-					<span class="title">כותרת</span>
-					<span class="subtitle">כותרת משני</span>
+					<span class="title">הוספת גנן</span>
+					<span class="subtitle">מאיה קידר</span>
 				</div>
 				<!-- ENDS title -->
 				
