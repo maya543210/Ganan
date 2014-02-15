@@ -23,10 +23,95 @@ public class Company
     private List<Picture> companyListPicture; // רשימת תמונות של הגנן
 
 
+    //-----------companyId---------
     public int CompanyId
     {
         get { return companyId; }
         set { companyId = value; }
+    }
+
+    //-----------companyCode----------
+    public int CompanyCode
+    {
+        get { return companyCode; }
+        set { companyCode = value; }
+    }
+
+    //-----------companyName---------
+    public string CompanyName
+    {
+        get { return companyName; }
+        set { companyName = value; }
+    }
+
+    //--------------companyPhone1----------
+    public Phone CompanyPhone1
+    {
+        get { return companyPhone1; }
+        set { companyPhone1 = value; }
+    }
+
+    //-------------companyPhone2------------
+    public Phone CompanyPhone2
+    {
+        get { return companyPhone2; }
+        set { companyPhone2 = value; }
+    }
+
+    //-------------companyCity------------
+    public string CompanyCity
+    {
+        get { return companyCity; }
+        set { companyCity = value; }
+    }
+
+    //--------------companyAddress----------
+    public string CompanyAddress
+    {
+        get { return companyAddress; }
+        set { companyAddress = value; }
+    }
+
+    //-----------companyGanan-----------
+    public bool CompanyGanan
+    {
+        get { return companyGanan; }
+        set { companyGanan = value; }
+    }
+
+    //--------------companyArch---------
+    public bool CompanyArch
+    {
+        get { return companyArch; }
+        set { companyArch = value; }
+    }
+
+    //------------CompanyDescs-----------
+    public string CompanyDescs
+    {
+        get { return companyDescs; }
+        set { companyDescs = value; }
+    }
+
+    //------------CompanyEmail---------
+    public string CompanyEmail
+    {
+        get { return companyEmail; }
+        set { companyEmail = value; }
+    }
+
+    //--------------companyServiceArea---------
+    public List<string> CompanyServiceArea
+    {
+        get { return companyServiceArea; }
+        set { companyServiceArea = value; }
+    }
+
+    //--------------companyListPicture-------------
+    public List<Picture> CompanyListPicture
+    {
+        get { return companyListPicture; }
+        set { companyListPicture = value; }
     }
 
 

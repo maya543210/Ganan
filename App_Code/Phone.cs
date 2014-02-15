@@ -8,11 +8,32 @@ using System.Web;
 /// </summary>
 public class Phone
 {
-
-    private string phoneSourceId; 
+    private string phoneSourceId; // המספר זיהוי של המקור של הטלפון -הלקוח או הגנן
     private int phoneAreaCode; // אזור חיוג
-    private int phoneNumber; // טלפון1
-   
+    private int phoneNumber; // מספר הטלפון
+
+    //---------phoneSourceId-------
+    public string PhoneSourceId
+    {
+        get { return phoneSourceId; }
+        set { phoneSourceId = value; }
+    }
+
+    //-------phoneAreaCode------
+    public int PhoneAreaCode
+    {
+        get { return phoneAreaCode; }
+        set { phoneAreaCode = value; }
+    }
+
+    //-------phoneNumber---------
+    public int PhoneNumber
+    {
+        get { return phoneNumber; }
+        set { phoneNumber = value; }
+    }
+
+
 	public Phone()
 	{
 		//

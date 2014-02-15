@@ -8,10 +8,39 @@ using System.Web;
 /// </summary>
 public class Picture
 {
-    private string imageCompanyId;
-    private string imageId;
-    private string imageUrl;
-    private string imageDescription;
+    private string imageCompanyId; // המספר זיהוי של החברה
+    private string imageId; // המספר זיהוי של התמונה 
+    private string imageUrl; // כתובת של התמונה URL
+    private string imageDescription; // תיאור התמונה
+
+    //-----------imageCompanyId---------
+    public string ImageCompanyId
+    {
+        get { return imageCompanyId; }
+        set { imageCompanyId = value; }
+    }
+
+    //-----------imageId---------
+    public string ImageId
+    {
+        get { return imageId; }
+        set { imageId = value; }
+    }
+
+    //----------imageUrl-------
+    public string ImageUrl
+    {
+        get { return imageUrl; }
+        set { imageUrl = value; }
+    }
+
+    //---------imageDescription-------
+    public string ImageDescription
+    {
+        get { return imageDescription; }
+        set { imageDescription = value; }
+    }
+
 
 	public Picture()
 	{
