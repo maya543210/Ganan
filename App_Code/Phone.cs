@@ -8,7 +8,6 @@ using System.Web;
 /// </summary>
 public class Phone
 {
-    private string phoneSourceId; // המספר זיהוי של המקור של הטלפון -הלקוח או הגנן
     private int phoneAreaCode; // אזור חיוג
     private int phoneNumber; // מספר הטלפון
 
