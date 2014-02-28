@@ -16,14 +16,14 @@ public partial class _ShowGanan : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //----------------DataSet_Aya----------------------------
-        string CS = ConfigurationManager.ConnectionStrings["stamShemConfi"].ConnectionString; //stamShemConfi זה השם שהגדרנו בקובץ של הווב קונפיג. וכרגע אין לנו אותו.CS זה שם שאני בחרתי...
-        using (SqlConnection con = new SqlConnection(CS))//con זה סתם שם שאני הגדרתי לקישור
-        {
-            SqlDataAdapter da = new SqlDataAdapter("shem_proc", con);//shem_proc זה השם שניתן בדטהבייס לפעולה..da זה שם שנתתי לאוביקט DataAdapter.
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;//הגדרת סוג הפקודת sql.
+        //string CS = ConfigurationManager.ConnectionStrings["stamShemConfi"].ConnectionString; //stamShemConfi זה השם שהגדרנו בקובץ של הווב קונפיג. וכרגע אין לנו אותו.CS זה שם שאני בחרתי...
+        //using (SqlConnection con = new SqlConnection(CS))//con זה סתם שם שאני הגדרתי לקישור
+        //{
+        //    SqlDataAdapter da = new SqlDataAdapter("shem_proc", con);//shem_proc זה השם שניתן בדטהבייס לפעולה..da זה שם שנתתי לאוביקט DataAdapter.
+            //da.SelectCommand.CommandType = CommandType.StoredProcedure;//הגדרת סוג הפקודת sql.
 
-            DataSet ds = new DataSet();//יצירת אוביקט חדש של דטה סט
-            da.Fill(ds);//מילוי הדטה סט ע"י הדטה אדפטר.
+            //DataSet ds = new DataSet();//יצירת אוביקט חדש של דטה סט
+            //da.Fill(ds);//מילוי הדטה סט ע"י הדטה אדפטר.
 
             //איך מעבירים את הדטה אבל לא לתוך גריד ויו??
 
@@ -36,8 +36,8 @@ public partial class _ShowGanan : System.Web.UI.Page
 
 
 
-        if (!IsPostBack)
-        {//----------------Rating_Test--------------------------------------
+        //if (!IsPostBack)
+        //{//----------------Rating_Test--------------------------------------
 
             // Make up a fake ItemId and fake Values from a ViewState property.
             //  ContentRating1.ItemId = Guid.NewGuid();
@@ -92,14 +92,13 @@ public partial class _ShowGanan : System.Web.UI.Page
             //ImageCompany.ImageUrl = "http://goaskella.com/wp-content/uploads/2011/09/missing.jpeg";
 
 
-            Company c = new Company();
+            //Company c = new Company();
 
 
-            LabelCompanyName.Text = c.CompanyName;
+            //LabelCompanyName.Text = c.CompanyName;
 
 
 
 
         }
-    }
-}
+   

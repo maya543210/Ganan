@@ -4,6 +4,7 @@
 </asp:Content>
 --%> <%--סתם מיותר לי אבל לא רציתי למחוק--%>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+ 
 
 
 		<!-- MAIN -->
@@ -152,6 +153,8 @@
 				
 					<!-- Rating -->
 					<h4 class="line-divider">דירוג</h4>
+
+                   
 
                     <%--<div>
                      <asp:contentrating 
