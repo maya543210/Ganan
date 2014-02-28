@@ -11,12 +11,6 @@ public class Phone
     private int phoneAreaCode; // אזור חיוג
     private int phoneNumber; // מספר הטלפון
 
-    //---------phoneSourceId-------
-    public string PhoneSourceId
-    {
-        get { return phoneSourceId; }
-        set { phoneSourceId = value; }
-    }
 
     //-------phoneAreaCode------
     public int PhoneAreaCode
