@@ -173,6 +173,7 @@ body
 #page-title{
 	overflow: hidden;
 	height: 117px;
+	padding-right:30px; /*maya*/
 	margin-bottom: 30px;
 	margin-top:15px; /*aya*/
 	background: #f2f1f1 url('../img/twitter-border.png') repeat-x left bottom;
@@ -1072,10 +1073,13 @@ h6{ font-size: 20px; }
 
 /* CONTACT --------------------------------------------------------*/
 
-.one-column{
-	width: 438px;
-	float: left;
-	margin-left: 30px;
+.one-column
+{
+    width: 438px;
+    float: right;
+    margin-left: 30px;
+    padding-right:30px;
+
 }
 
 /* FORMS ------------------------------------------------------------*/

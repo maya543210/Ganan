@@ -82,6 +82,15 @@
 		<!-- SKIN -->
 		<link rel="stylesheet" href="skins/glossy/style.css" type="text/css" media="screen" />
         
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+        function logo_onclick() {
+
+        }
+
+// ]]>
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -91,7 +100,7 @@
 		
 		<!-- HEADER -->
 		<div id="header">
-			<a href="index.html"><img id="logo" src="img/logo.png" alt="Nova" /></a>
+			<a href="index.html"><img id="logo" src="img/logo.png" alt="Nova" onclick="return logo_onclick()" /></a>
 			<!-- Social -->
 			<div id="social-holder">
 				<ul class="social">

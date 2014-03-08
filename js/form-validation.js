@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 		//name
 		var name = $("input#name").val();
 		if(name == ""){
-			$("#error").fadeIn().text("Name required.");
+			$("#error").fadeIn().text("Name required."); //maya need it
 			$("input#name").focus();
 			return false;
 		}

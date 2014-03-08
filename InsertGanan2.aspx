@@ -1,18 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="InsertGanan.aspx.cs" Inherits="_InsertGanan" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="InsertGanan2.aspx.cs" Inherits="_InsertGanan2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-<script src="jquery-1.10.2.min.js" type="text/javascript"></script>
+<%--<script src="jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> <!--Remote Link-->
 
  <script type = "text/javascript">
 
-
-
- </script>
+ </script>--%>
 
 		<!-- MAIN -->
 		<div id="main">
@@ -22,11 +20,69 @@
 				
 				<!-- title -->
 				<div id="page-title">
-					<span class="title">הוספת גנן</span><input id="btnID" type="button" value="btnID" />
+					<span class="title">הוספת גנן</span>
+                    <%--<input id="btnID" type="button" value="btnID" />--%>
 					<span class="subtitle">מאיה קידר</span>
 				</div>
 				<!-- ENDS title -->
 				
+
+
+
+
+
+
+                <div class="one-column" dir="rtl">
+					<!-- form -->
+					<h2>הוספת גנן</h2>
+					<script type="text/javascript" src="js/form-validation.js"></script>
+					<form id="contactForm" action="#" method="post">
+						<fieldset>
+							<div>
+								<label>שם</label>
+								<input name="name"  id="name" type="text" class="form-poshytip" title="שם חברת הגננים" />
+							</div>
+							<div>
+								<label>Email</label>
+								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
+							</div>
+							<div>
+								<label>Website</label>
+								<input name="web"  id="web" type="text" class="form-poshytip" title="Enter your website" />
+							</div>
+							<div>
+								<label>Comments</label>
+								<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your comments"></textarea>
+							</div>
+							
+							<!-- send mail configuration -->
+							<input type="hidden" value="your_email@your_server.com" name="to" id="to" />
+							<input type="hidden" value="youremail@luiszuno.com" name="from" id="from" />
+							<input type="hidden" value="From torn wordpress online" name="subject" id="subject" />
+							<input type="hidden" value="send-mail.php" name="sendMailUrl" id="sendMailUrl" />
+							<!-- ENDS send mail configuration -->
+							
+                            <p></p>
+							<p><asp:Button ID="Button1" runat="server" Text="Button" /></p>
+                            <p><input type="button" value="SEND" name="submit" id="submit" /></p>
+                    
+						</fieldset>
+						<p id="error" class="warning">Message</p>
+					</form>
+					<p id="success" class="success">Thanks for your comments.</p>
+					<!-- ENDS form -->
+				</div>
+				<!-- ENDS column -->
+				
+
+
+
+
+
+
+
+
+
 				<!-- page-content -->
 				<div id="page-content">
 					<h4 class="line-divider">Headers</h4>
