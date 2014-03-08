@@ -1077,8 +1077,9 @@ h6{ font-size: 20px; }
 {
     width: 438px;
     float: right;
-    margin-left: 30px;
-    padding-right:30px;
+    margin-left: 20px; /*maya*/
+    padding-right:20px; /*maya*/
+    direction:rtl;
 
 }
 

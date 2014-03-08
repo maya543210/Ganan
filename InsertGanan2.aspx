@@ -21,7 +21,7 @@
 				<!-- title -->
 				<div id="page-title">
 					<span class="title">הוספת גנן</span>
-                    <%--<input id="btnID" type="button" value="btnID" />--%>
+                 
 					<span class="subtitle">מאיה קידר</span>
 				</div>
 				<!-- ENDS title -->
@@ -32,29 +32,38 @@
 
 
 
-                <div class="one-column" dir="rtl">
+                <div class="one-column">
 					<!-- form -->
 					<h2>הוספת גנן</h2>
 					<script type="text/javascript" src="js/form-validation.js"></script>
 					<form id="contactForm" action="#" method="post">
 						<fieldset>
 							<div>
-								<label>שם</label>
-								<input name="name"  id="name" type="text" class="form-poshytip" title="שם חברת הגננים" />
-							</div>
-							<div>
-								<label>Email</label>
-								<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />
-							</div>
-							<div>
-								<label>Website</label>
-								<input name="web"  id="web" type="text" class="form-poshytip" title="Enter your website" />
-							</div>
-							<div>
-								<label>Comments</label>
-								<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your comments"></textarea>
-							</div>
+
+                            	<label>ח.פ.</label>
+                                <asp:TextBox ID="TBname" name="name" type="text" class="form-poshytip" title="שם חברת הגננים" runat="server"></asp:TextBox>
 							
+								<%--<input name="name"  id="name" type="text" class="form-poshytip" title="שם חברת הגננים" />--%>
+							</div>
+							<div>
+								<label>טלפון</label>
+                                <asp:TextBox ID="email" name="email" type="text" class="form-poshytip" title="Enter your email address" runat="server"></asp:TextBox>
+								<%--<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />--%>
+							</div>
+							<div>
+								<label>מיקום החברה</label>
+                                <asp:TextBox ID="web" name="web" type="text" class="form-poshytip" title="Enter your website" runat="server"></asp:TextBox>
+								<%--<input name="web"  id="web" type="text" class="form-poshytip" title="Enter your website" />--%>
+							</div>
+							<div>
+								<label>תיאור קצר של החברה</label>
+                                <asp:TextBox ID="comments" name="comments" type="text" class="form-poshytip" 
+                                    title="Enter your comments" runat="server" Height="30px"></asp:TextBox>
+								<%--<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your comments"></textarea>--%>
+							</div>
+
+
+
 							<!-- send mail configuration -->
 							<input type="hidden" value="your_email@your_server.com" name="to" id="to" />
 							<input type="hidden" value="youremail@luiszuno.com" name="from" id="from" />
@@ -75,6 +84,62 @@
 				<!-- ENDS column -->
 				
 
+
+
+
+
+                <!-- column (right)-->
+                  <div class="one-column">
+					<!-- form -->
+					<h2>הוספת גנן</h2>
+					<script type="text/javascript" src="js/form-validation.js"></script>
+					<form id="contactForm" action="#" method="post">
+						<fieldset>
+							<div>
+
+                            	<label>שם החברה</label>
+                                <asp:TextBox ID="TextBox1" name="name" type="text" class="form-poshytip" title="שם חברת הגננים" runat="server"></asp:TextBox>
+							
+								<%--<input name="name"  id="name" type="text" class="form-poshytip" title="שם חברת הגננים" />--%>
+							</div>
+							<div>
+								<label>טלפון</label>
+                                <asp:TextBox ID="TextBox2" name="email" type="text" class="form-poshytip" title="Enter your email address" runat="server"></asp:TextBox>
+								<%--<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />--%>
+							</div>
+							<div>
+								<label>כתובת המשרדים</label>
+                                <asp:TextBox ID="TextBox3" name="web" type="text" class="form-poshytip" title="Enter your website" runat="server"></asp:TextBox>
+								<%--<input name="web"  id="web" type="text" class="form-poshytip" title="Enter your website" />--%>
+							</div>
+							<div>
+								<label>Comments</label>
+                                <asp:TextBox ID="TextBox4" name="comments" type="text" class="form-poshytip" title="Enter your comments" runat="server"></asp:TextBox>
+								<%--<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your comments"></textarea>--%>
+							</div>
+
+
+
+							<!-- send mail configuration -->
+							<input type="hidden" value="your_email@your_server.com" name="to" id="Hidden1" />
+							<input type="hidden" value="youremail@luiszuno.com" name="from" id="Hidden2" />
+							<input type="hidden" value="From torn wordpress online" name="subject" id="Hidden3" />
+							<input type="hidden" value="send-mail.php" name="sendMailUrl" id="Hidden4" />
+							<!-- ENDS send mail configuration -->
+							
+                            <p></p>
+							<p><asp:Button ID="Button2" runat="server" Text="Button" /></p>
+                            <p><input type="button" value="SEND" name="submit" id="Button3" /></p>
+                    
+						</fieldset>
+						<p id="P1" class="warning">Message</p>
+					</form>
+					<p id="P2" class="success">Thanks for your comments.</p>
+					<!-- ENDS form -->
+				</div>
+				<!-- ENDS column -->
+				
+				
 
 
 
