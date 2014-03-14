@@ -20,7 +20,7 @@
 				
 				<!-- title -->
 				<div id="page-title">
-					<span class="title">הוספת גנן</span>
+					<span class="title">עריכת פרטי גנן</span>
                  
 					<span class="subtitle">מאיה קידר</span>
 				</div>
@@ -34,7 +34,7 @@
 
                 <div class="one-column">
 					<!-- form -->
-					<h2>הוספת גנן</h2>
+					<h2></h2>
 					<script type="text/javascript" src="js/form-validation.js"></script>
 					<form id="contactForm" action="#" method="post">
 						<fieldset>
@@ -58,11 +58,11 @@
 							<div>
 								<label>תיאור קצר של החברה</label>
                                 <asp:TextBox ID="comments" name="comments" type="text" class="form-poshytip" 
-                                    title="Enter your comments" runat="server" Height="30px"></asp:TextBox>
+                                    title="Enter your comments" runat="server" Height="60px"></asp:TextBox>
 								<%--<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your comments"></textarea>--%>
 							</div>
 
-
+<%--
 
 							<!-- send mail configuration -->
 							<input type="hidden" value="your_email@your_server.com" name="to" id="to" />
@@ -70,10 +70,14 @@
 							<input type="hidden" value="From torn wordpress online" name="subject" id="subject" />
 							<input type="hidden" value="send-mail.php" name="sendMailUrl" id="sendMailUrl" />
 							<!-- ENDS send mail configuration -->
-							
+						--%>	
                             <p></p>
-							<p><asp:Button ID="Button1" runat="server" Text="Button" /></p>
-                            <p><input type="button" value="SEND" name="submit" id="submit" /></p>
+
+                             <label>כל הפרטים המופיעים מטה הם פרטים אשר מילאתי ואני מאשר כי אין בהם חומר פוגע או אינו הולם</label>
+
+                            <p></p>
+							<p><asp:Button ID="submit" value="SEND" name="submit" runat="server" Text="שלח פרטים" /></p>
+                            <%--<p><input type="button" value="SEND" name="submit" id="submit" /></p>--%>
                     
 						</fieldset>
 						<p id="error" class="warning">Message</p>
@@ -91,7 +95,7 @@
                 <!-- column (right)-->
                   <div class="one-column">
 					<!-- form -->
-					<h2>הוספת גנן</h2>
+					<h2></h2>
 					<script type="text/javascript" src="js/form-validation.js"></script>
 					<form id="contactForm" action="#" method="post">
 						<fieldset>
@@ -118,7 +122,7 @@
 								<%--<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your comments"></textarea>--%>
 							</div>
 
-
+                <%--           
 
 							<!-- send mail configuration -->
 							<input type="hidden" value="your_email@your_server.com" name="to" id="Hidden1" />
@@ -126,22 +130,22 @@
 							<input type="hidden" value="From torn wordpress online" name="subject" id="Hidden3" />
 							<input type="hidden" value="send-mail.php" name="sendMailUrl" id="Hidden4" />
 							<!-- ENDS send mail configuration -->
-							
+						--%>	
                             <p></p>
-							<p><asp:Button ID="Button2" runat="server" Text="Button" /></p>
-                            <p><input type="button" value="SEND" name="submit" id="Button3" /></p>
+							
                     
+
+                            <asp:FileUpload ID="FileUpload1" runat="server" />
+
+
+
 						</fieldset>
-						<p id="P1" class="warning">Message</p>
+						<%--<p id="P1" class="warning">Message</p>--%>
 					</form>
-					<p id="P2" class="success">Thanks for your comments.</p>
+					<%--<p id="P2" class="success">Thanks for your comments.</p>--%>
 					<!-- ENDS form -->
 				</div>
 				<!-- ENDS column -->
-				
-				
-
-
 
 
 
@@ -151,6 +155,23 @@
 				<!-- page-content -->
 				<div id="page-content">
 					<h4 class="line-divider">Headers</h4>
+
+                    <p></p>
+
+                    <label>כל הפרטים המופיעים מטה הם פרטים אשר מילאתי ואני מאשר כי אין בהם חומר פוגע או אינו הולם</label>
+
+                    <p></p>
+				    <p><asp:Button ID="Button1" value="SEND" name="submit" runat="server" Text="שלח פרטים" /></p>
+                    <%--<p><input type="button" value="SEND" name="submit" id="submit" /></p>--%>
+                    
+
+
+
+
+
+
+
+
 					<h1>Lorem ipsum dolor</h1>
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
 					
