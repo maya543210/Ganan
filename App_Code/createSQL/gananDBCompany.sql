@@ -16,6 +16,7 @@ CREATE TABLE [Company] (
 	[companyArch] bit default (0) , --אדריכלים?
 	[companyDescs] varchar (150) NOT NULL , --תיאור קצר של החברה
 	[companyEmail] varchar (30) NOT NULL, --מייל
+	[companyLogoUrl] varchar (80),
 	Primary key (companyId)
 )
            
@@ -32,6 +33,7 @@ INSERT INTO [dbo].[Company]
            ,[companyArch]
            ,[companyDescs]
            ,[companyEmail]
+           ,[companyLogoUrl]
            )
      VALUES
            ('thina'
@@ -40,6 +42,14 @@ INSERT INTO [dbo].[Company]
            ,10
            ,0
            )
+
+
+ALTER TABLE Company
+ADD companyLogoUrl varchar (80)
+
+ALTER TABLE Company
+DROP COLUMN companyImgUrl 
+
 
 
 
