@@ -1,6 +1,42 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ShowGanan.aspx.cs" Inherits="_ShowGanan" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+ <title></title>
+ <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+
+<div class="div1">
+ <asp:Image ID="Image1" runat="server"  CssClass="ImageCompany"/> 
+</div>
+<div class="div1"> 
+<h1 class="CompanyName">
+<asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+</h1>
+</div>
+
+ <div class="ContactDiv">
+    <img id="Img1" alt="" class="ImageContact" src="images/phone.GIF"  runat="server"/>
+     &nbsp;צור קשר
+ </div>
+
+
+
+</div>
+</asp:Content>
+</form>
+</body>
+</html>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -32,7 +68,7 @@
 					</div>--%>
 					<%--<h4 class="line-divider">Headers</h4>--%>
                     
-                    <div id="companyDescription" class="DescDiv">
+                   <%-- <div id="companyDescription" class="DescDiv">
                         <h6>על החברה</h6>
                         <asp:Label ID="LabelDescription" runat="server" Text="description"></asp:Label>
                         <h6>איזור שירות</h6>
@@ -41,7 +77,74 @@
                         <asp:Label ID="LabelAddress" runat="server" Text="הלילך 15, יבנה "></asp:Label>
 
                   
-                    </div>
+                    </div>--%>
+                <%--    ---------------test----------------------------------------%>
+                <asp:Label ID="LabelDescription" runat="server" Text="description"></asp:Label>
+                <%--<ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                </ajaxToolkit:ToolkitScriptManager>--%>
+                <ajaxToolkit:Accordion ID="Accordion1" SelectedIndex="0" FadeTransitions="true"
+                        FramesPerSecond= "40" TransitionDuration="250" AutoSize="None"  
+                        CssClass="accordion"  
+                        HeaderCssClass="accordionHeader"  
+                        HeaderSelectedCssClass="accordionHeaderSelected"  
+                        ContentCssClass="accordionContent"
+                        meta:resourcekey="mainPaneResource1"
+                         runat="server"> 
+                <Panes>
+
+                <ajaxToolkit:AccordionPane
+                 ID="AccordionPane2" runat="server"> 
+
+                <Header> 
+                <a href=""onclick="return false;" class="Link" > 
+                Open 
+                </a> 
+                </Header> 
+                <Content> 
+                <div> 
+                 First Content Area First Content AreaFirst Content Area First Content Area 
+                 First Content Area</div> 
+                </Content> 
+                </ajaxToolkit:AccordionPane> 
+                <ajaxToolkit:AccordionPane ID="AccordionPane1" runat="server"> 
+                <Header> 
+                <a href=""onclick="return false;" class="Link" > 
+                Open 
+                </a> 
+                </Header> 
+                <Content> 
+                <div> 
+                 Second Content Area Second ContentArea Second Content Area Second Content 
+	             Area Second Content Area 
+                </div> 
+                </Content> 
+                </ajaxToolkit:AccordionPane> <ajaxToolkit:AccordionPane ID="AccordionPane3" runat="server"> 
+                <Header> 
+                <a href=""onclick="return false;" class="Link" > 
+                 Open 
+                </a> 
+               </Header> 
+               <Content> 
+               <div> 
+                Third Content Area Third Content AreaThird Content Area Third Content 
+	            Area Third Content Area 
+               </div> 
+               </Content> 
+               </ajaxToolkit:AccordionPane> <ajaxToolkit:AccordionPane ID="AccordionPane4" runat="server"> 
+               <Header> 
+               <a href=""onclick="return false;" class="Link" > 
+                Open 
+               </a> 
+               </Header> 
+               <Content> 
+               <div> 
+                Fourth Content Area Fourth Content AreaFourth Content Area 
+                Fourth Content Area Fourth Content Area 
+               </div> 
+               </Content> 
+               </ajaxToolkit:AccordionPane> 
+               </Panes>
+               </ajaxToolkit:Accordion> 
                     <br /> <br /><br /> <br /><br /> <br />
 
 					

@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ShowGanan.aspx.cs" Inherits="_ShowGanan" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <%--<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-</asp:Content>
---%> <%--סתם מיותר לי אבל לא רציתי למחוק--%>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+</asp:Content>--%>
  
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+ <link href="css/style.css" rel="stylesheet" type="text/css" />
 
 
 		<!-- MAIN -->
@@ -18,15 +19,16 @@
 				</div>
 				--%>
 
-
 				<!-- title -->
 				<div id="page-title">
+					
 					<%--<span class="title">הצגת גנן</span>--%>
                     
 					<%--<span class="subtitle">איה טולדנו</span>--%>
                    
                      <div class="div1">  <%-- class div1 כדי להצמיד את האובייקטים לימין--%>
                     <asp:Image ID="ImageCompany" runat="server"  CssClass="ImageCompany"/>  <%--תמונת החברה--%>
+                         
                     </div>
 
                     <div class="div1">  <%--class div1 כדי להצמיד את האובייקטים לימין--%>
@@ -45,12 +47,24 @@
                     <div class="ContactDiv">
                      <%--<a href="https://www.google.co.il/?gws_rd=cr&ei=lxkBU_zeMqTa4wTctYDgCA" class="div2">--%>  <%--איך אני עושה את הקישור בלחיצה על התמונה? אירוע?--%>
                        <img alt="" class="ImageContact" src="images/phone.GIF"  runat="server"/>
-                       צור קשר
+
+                       &nbsp;צור קשר
                      </div>
                    <%-- </a> --%>
                         
                    
-				   </div>  <%--end div page-title--%>
+				   </div>  
+        
+        <%--<asp:UpdatePanel ID="UpdatePanel2" runat="server">
+            <ContentTemplate>
+                <asp:ScriptManager ID="ScriptManager2" runat="server">
+                </asp:ScriptManager>
+                <ajaxToolkit:Accordion ID="Accordion2" runat="server">
+                </ajaxToolkit:Accordion>
+            </ContentTemplate>
+        </asp:UpdatePanel>--%>
+        
+        <%--end div page-title--%>
           
 				<!-- ENDS title -->
 				
@@ -59,21 +73,87 @@
 					</div> --%>
 					<%--<h4 class="line-divider">Headers</h4>--%>   <%--סתם מיותר לי אבל לא רציתי למחוק--%>
                     
-                    <div id="companyDescription" class="DescDiv">  <%--תיאור החברה--%>
-                        <h6>על החברה
-                        </h6>
-                        <asp:Label ID="LabelDescription" runat="server" Text="description"></asp:Label>
-                        <br />
+                    <%--<div id="companyDescription" class="DescDiv">--%>  <%--תיאור החברה--%>
+                        <%--<h6>על החברה</h6>--%>
+                        
+                       <%-- <h6>&nbsp;</h6>
+                        <asp:Label ID="LabelDescription" runat="server" Text="description"></asp:Label>--%>
+                        <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                        </ajaxToolkit:ToolkitScriptManager>
+
+                        <div class="ac">
+                        <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                        <ContentTemplate>
+                        <ajaxToolkit:Accordion ID="Accordion1" SelectedIndex="0" FadeTransitions="true"
+                        FramesPerSecond= "40" TransitionDuration="250" AutoSize="None"  
+                        CssClass="accordion"  
+                        HeaderCssClass="accordionHeader"  
+                        HeaderSelectedCssClass="accordionHeaderSelected"  
+                        ContentCssClass="accordionContent"
+                        meta:resourcekey="mainPaneResource1"
+                         runat="server">
+
+                        <Panes>
+                         <ajaxToolkit:AccordionPane runat="server" ID="PaneDetail">
+                          <Header>
+                          <a href=""  onclick = "return false;" class="Link">על החברה
+                          </a> 
+                          </Header>
+                          <Content>
+                          תיאור.. 
+                          </Content>
+                         </ajaxToolkit:AccordionPane>
+                       
+                         <ajaxToolkit:AccordionPane runat="server" ID="PaneAdd">
+                          <Header><a href=""  onclick = "return false;" class="Link">כתובת
+                          </a> 
+                          </Header>
+                          <Content>הלילך 15 יבנה</Content>
+                         </ajaxToolkit:AccordionPane>
+                        
+                         <ajaxToolkit:AccordionPane runat="server" ID="PaneArea">
+                          <Header>
+                          <a href=""  onclick = "return false;" class="Link">איזור שירות
+                          </a> 
+                          </Header>
+                          <Content>איזור הדרום...</Content>
+                         </ajaxToolkit:AccordionPane>
+                        </Panes>
+
+                        </ajaxToolkit:Accordion>
+                         </ContentTemplate>
+                         </asp:UpdatePanel>
+                         </div>
+
+                         <%--<ajaxToolkit:Accordion ID="Accordion3" runat="server">
+                        <Panes>
+                        <ajaxToolkit:AccordionPane runat="server">
+                        <Header>איזור שירות</Header>
+                        <Content>
+                        איזורי שירות 
+                        </Content>
+                        </ajaxToolkit:AccordionPane>
+                        </Panes>
+                        </ajaxToolkit:Accordion>--%>
+                       <%-- <br />
                         <h6>איזור שירות</h6>
-                        <asp:Label ID="LabelServiceArea" runat="server" Text="Service Area"></asp:Label>   <%--האיזור בו ניתן שירות--%>
-                        <h6> כתובת</h6>
-                        <asp:Label ID="LabelAddress" runat="server" Text="הלילך 15, יבנה "></asp:Label>   <%--כתובת הגנן--%>
+                        <asp:Label ID="LabelServiceArea" runat="server" Text="Service Area"></asp:Label>--%>   <%--האיזור בו ניתן שירות--%>
+                        <%--<h6> כתובת</h6>
+                        
+                        <asp:Label ID="LabelAddress" runat="server" Text="הלילך 15, יבנה "></asp:Label>   
 
                   
-                    </div>   <%--סיום תיאור החברה--%>
+                    </div>--%>   <%--סיום תיאור החברה--%>
 
+                   
 
-                    <br /> <br />  <br /> <br />  <br /> <br />
+                 <%--   <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        </asp:UpdatePanel>--%>
+        <br />  
+                   <%-- <ajaxToolkit:CollapsiblePanelExtender ID="CollapsiblePanelExtender1" 
+                     runat="server">
+                    </ajaxToolkit:CollapsiblePanelExtender>--%>
+                    <br /> <br />  <br /> <br />
 
 
 
@@ -153,6 +233,9 @@
 				
 					<!-- Rating -->
 					<h4 class="line-divider">דירוג</h4>
+
+                     
+
 
                    
 
@@ -269,13 +352,6 @@
 </asp:Content>
 
 <asp:Content ID="Content3" runat="server" contentplaceholderid="head">
-    <style type="text/css">
-        .style1
-        {
-            width: 242px;
-            height: 222px;
-        }
-    </style>
     </asp:Content>
 
 

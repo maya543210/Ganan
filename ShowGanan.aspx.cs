@@ -10,16 +10,17 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Configuration;
 using System.Data.SqlClient;
+using AjaxControlToolkit;
 
 public partial class _ShowGanan : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
         //----------------DataSet_Aya----------------------------
-        //string CS = ConfigurationManager.ConnectionStrings["stamShemConfi"].ConnectionString; //stamShemConfi זה השם שהגדרנו בקובץ של הווב קונפיג. וכרגע אין לנו אותו.CS זה שם שאני בחרתי...
+        //string CS = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString; //stamShemConfi זה השם שהגדרנו בקובץ של הווב קונפיג. וכרגע אין לנו אותו.CS זה שם שאני בחרתי...
         //using (SqlConnection con = new SqlConnection(CS))//con זה סתם שם שאני הגדרתי לקישור
         //{
-        //    SqlDataAdapter da = new SqlDataAdapter("shem_proc", con);//shem_proc זה השם שניתן בדטהבייס לפעולה..da זה שם שנתתי לאוביקט DataAdapter.
+        //    SqlDataAdapter da = new SqlDataAdapter("shem_proc-הפקודה של sql", con);//shem_proc זה השם שניתן בדטהבייס לפעולה..da זה שם שנתתי לאוביקט DataAdapter.
             //da.SelectCommand.CommandType = CommandType.StoredProcedure;//הגדרת סוג הפקודת sql.
 
             //DataSet ds = new DataSet();//יצירת אוביקט חדש של דטה סט
