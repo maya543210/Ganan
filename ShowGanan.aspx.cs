@@ -16,24 +16,88 @@ public partial class _ShowGanan : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //----------------DataSet_Aya----------------------------
-        //string CS = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString; //stamShemConfi זה השם שהגדרנו בקובץ של הווב קונפיג. וכרגע אין לנו אותו.CS זה שם שאני בחרתי...
-        //using (SqlConnection con = new SqlConnection(CS))//con זה סתם שם שאני הגדרתי לקישור
+
+        Company C = new Company();
+        //if (Session["tmp"] == null)
         //{
-        //    SqlDataAdapter da = new SqlDataAdapter("shem_proc-הפקודה של sql", con);//shem_proc זה השם שניתן בדטהבייס לפעולה..da זה שם שנתתי לאוביקט DataAdapter.
-            //da.SelectCommand.CommandType = CommandType.StoredProcedure;//הגדרת סוג הפקודת sql.
+        //    תציג את הנוכחי....
+        //    did i need the if sentance?
+        //}
 
-            //DataSet ds = new DataSet();//יצירת אוביקט חדש של דטה סט
-            //da.Fill(ds);//מילוי הדטה סט ע"י הדטה אדפטר.
+        //else 
+        //{
+        //   C = (Company)Session["tmp"];
+           
+        //}
 
-            //איך מעבירים את הדטה אבל לא לתוך גריד ויו??
+        DataTable dt = C.readDataDB();//קוראים ממסד הנתונים db
 
+        ShowData(dt);
 
         }
 
+    ///-----------------הצגת המידע ממסד הנתונים על ידי שימוש בפקד של טבלה-------------------------------------------/
+
+    private void ShowData(DataTable dt)
+    {
+        Table tbl_ = ShowTable(dt);
+        tablePH_Descrip.Controls.Add(tbl_);
+    }
+       
+    ///-------------------------creata table--------------------------------------------------------/
+    public Table ShowTable(DataTable dt)
+    {
+
+        Table tbl = new Table();
+
+        // build the header row
+        TableRow trH = new TableRow();
+
+        foreach (DataColumn dc in dt.Columns)
+        {
+            AddCells(trH, dc.ColumnName);
+            trH.BackColor = System.Drawing.Color.Yellow;
+            tbl.Rows.Add(trH);
+        }
+
+        foreach (DataRow row in dt.Rows)
+        {
+            TableRow tr = new TableRow();
+            foreach (DataColumn dc in dt.Columns)
+            {
+                AddCells(tr, row[dc.ColumnName].ToString());
+            }
+            tbl.Rows.Add(tr);
+        }
+        return tbl;
+    }
+
+    //---------------------------------------------------------------------------------------
+    // Add Cells to a  DataRow
+    //---------------------------------------------------------------------------------------
+    void AddCells(TableRow tr, string text)
+    {
+
+        TableCell tc = new TableCell();
+        tc.Text = text;
+        tr.Cells.Add(tc);
+
+    }
 
 
 
+
+    //----------------DataSet_Aya----------------------------
+    //string CS = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString; //stamShemConfi זה השם שהגדרנו בקובץ של הווב קונפיג. וכרגע אין לנו אותו.CS זה שם שאני בחרתי...
+    //using (SqlConnection con = new SqlConnection(CS))//con זה סתם שם שאני הגדרתי לקישור
+    //{
+    //    SqlDataAdapter da = new SqlDataAdapter("shem_proc-הפקודה של sql", con);//shem_proc זה השם שניתן בדטהבייס לפעולה..da זה שם שנתתי לאוביקט DataAdapter.
+    //da.SelectCommand.CommandType = CommandType.StoredProcedure;//הגדרת סוג הפקודת sql.
+
+    //DataSet ds = new DataSet();//יצירת אוביקט חדש של דטה סט
+    //da.Fill(ds);//מילוי הדטה סט ע"י הדטה אדפטר.
+
+    //איך מעבירים את הדטה אבל לא לתוך גריד ויו??
 
 
 

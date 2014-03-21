@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.SqlClient;
 
 /// <summary>
 /// Summary description for Company
@@ -122,4 +124,13 @@ public class Company
 		// TODO: Add constructor logic here
 		//
 	}
+
+    public DataTable readDataDB()
+    {
+        DBservices dbs = new DBservices(); //יצירת dbs חדש 
+        dbs = dbs.Read("DBconnectionString","dbo.Cars");
+        //לאחר החזרה מהמתודה בדי בי סרוויס, נשמור את האובייקט בסשיין
+        //HttpContext.Current.Session["tmp"] = dbs;
+        return dbs.dt;
+    }
 }

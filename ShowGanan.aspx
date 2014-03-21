@@ -100,7 +100,7 @@
                           </a> 
                           </Header>
                           <Content>
-                          תיאור.. 
+                          <asp:PlaceHolder ID="tablePH_Descrip" runat="server"></asp:PlaceHolder>
                           </Content>
                          </ajaxToolkit:AccordionPane>
                        
