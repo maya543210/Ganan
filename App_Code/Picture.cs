@@ -9,7 +9,7 @@ using System.Web;
 public class Picture
 {
     private string imageId; // המספר זיהוי של התמונה 
-    private string imageCompanyId; // המספר זיהוי של החברה
+    private int imageCompanyId; // המספר זיהוי של החברה
     private string imageUrl; // כתובת של התמונה URL
     private string imageDescription; // תיאור התמונה
 
@@ -21,7 +21,7 @@ public class Picture
     }
 
     //-----------imageCompanyId---------
-    public string ImageCompanyId
+    public int ImageCompanyId
     {
         get { return imageCompanyId; }
         set { imageCompanyId = value; }

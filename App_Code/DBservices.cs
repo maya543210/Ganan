@@ -86,7 +86,7 @@ public class DBservices
 
     //----------YANIV BEGIN-------------
 
-    
+/*   
         public DataTable Get_Porflio_DB()
         {
             string myConnectionString = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString; //  Making a string for SqlConnection
@@ -116,12 +116,22 @@ public class DBservices
              
             }
         }
-	
+*/	
 
 //----------YANIV END-------------
 
 //---------MAYA BEGIN-----------
 
+    /*
+        public DBservices Write() 
+        {
+    
+    
+    
+    
+        }
+    */
+    
 //---------MAYA END-----------------
 
 

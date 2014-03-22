@@ -41,26 +41,40 @@
 							<div>
 
                             	<label>ח.פ.</label>
-                                <asp:TextBox ID="TBname" name="name" type="text" class="form-poshytip" title="שם חברת הגננים" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TBcompanyCode" name="name" type="text" class="form-poshytip" title="שם חברת הגננים" runat="server"></asp:TextBox>
 							
 								<%--<input name="name"  id="name" type="text" class="form-poshytip" title="שם חברת הגננים" />--%>
 							</div>
 							<div>
 								<label>טלפון</label>
-                                <asp:TextBox ID="email" name="email" type="text" class="form-poshytip" title="Enter your email address" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TBcompanyPhone1" name="email" type="text" class="form-poshytip" title="Enter your email address" runat="server"></asp:TextBox>
+                                <asp:DropDownList ID="DDLcompanyPhone1" runat="server">
+                                    <asp:ListItem>04</asp:ListItem>
+                                    <asp:ListItem>09</asp:ListItem>
+                                    <asp:ListItem>08</asp:ListItem>
+                                    <asp:ListItem>06</asp:ListItem>
+                                </asp:DropDownList>
 								<%--<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />--%>
 							</div>
 							<div>
-								<label>מיקום החברה</label>
-                                <asp:TextBox ID="web" name="web" type="text" class="form-poshytip" title="Enter your website" runat="server"></asp:TextBox>
+								<label>כתובת החברה</label>
+                                <asp:TextBox ID="TBcompanyAddress" name="web" type="text" class="form-poshytip" title="Enter your website" runat="server"></asp:TextBox>
 								<%--<input name="web"  id="web" type="text" class="form-poshytip" title="Enter your website" />--%>
 							</div>
+
 							<div>
+								<label>כתובת מייל</label>
+                                <asp:TextBox ID="TBCompanyEmail" name="web" type="text" class="form-poshytip" title="Enter your website" runat="server"></asp:TextBox>
+								<%--<input name="web"  id="web" type="text" class="form-poshytip" title="Enter your website" />--%>
+							</div>
+
+                                                       <div>
 								<label>תיאור קצר של החברה</label>
-                                <asp:TextBox ID="comments" name="comments" type="text" class="form-poshytip" 
+                                <asp:TextBox ID="TBCompanyDescs" name="comments" type="text" class="form-poshytip" 
                                     title="Enter your comments" runat="server" Height="60px"></asp:TextBox>
 								<%--<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your comments"></textarea>--%>
 							</div>
+
 
 <%--
 
@@ -76,13 +90,15 @@
                              <label>כל הפרטים המופיעים מטה הם פרטים אשר מילאתי ואני מאשר כי אין בהם חומר פוגע או אינו הולם</label>
 
                             <p></p>
-							<p><asp:Button ID="submit" value="SEND" name="submit" runat="server" Text="שלח פרטים" /></p>
+							<p><asp:Button ID="Bsend" value="SEND" name="submit" runat="server" 
+                                    Text="שלח פרטים" onclick="Bsend_Click" /></p>
                             <%--<p><input type="button" value="SEND" name="submit" id="submit" /></p>--%>
                     
 						</fieldset>
 						<p id="error" class="warning">Message</p>
 					</form>
 					<p id="success" class="success">Thanks for your comments.</p>
+                    <h4 class="line-divider">Bullet list</h4>
 					<!-- ENDS form -->
 				</div>
 				<!-- ENDS column -->
@@ -102,25 +118,49 @@
 							<div>
 
                             	<label>שם החברה</label>
-                                <asp:TextBox ID="TextBox1" name="name" type="text" class="form-poshytip" title="שם חברת הגננים" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TBcompanyName" name="name" type="text" class="form-poshytip" title="שם חברת הגננים" runat="server"></asp:TextBox>
 							
 								<%--<input name="name"  id="name" type="text" class="form-poshytip" title="שם חברת הגננים" />--%>
 							</div>
 							<div>
 								<label>טלפון</label>
-                                <asp:TextBox ID="TextBox2" name="email" type="text" class="form-poshytip" title="Enter your email address" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TBcompanyPhone2" name="email" type="text" class="form-poshytip" title="Enter your email address" runat="server"></asp:TextBox>
+                                <asp:DropDownList ID="DDLcompanyPhone2" runat="server">
+                                    <asp:ListItem>04</asp:ListItem>
+                                    <asp:ListItem>09</asp:ListItem>
+                                    <asp:ListItem>08</asp:ListItem>
+                                    <asp:ListItem>06</asp:ListItem>
+                                </asp:DropDownList>
 								<%--<input name="email"  id="email" type="text" class="form-poshytip" title="Enter your email address" />--%>
 							</div>
-							<div>
-								<label>כתובת המשרדים</label>
-                                <asp:TextBox ID="TextBox3" name="web" type="text" class="form-poshytip" title="Enter your website" runat="server"></asp:TextBox>
+
+                                                         <%--הועתק מלמעלה--%>
+                            <div>
+								<label>עיר </label>
+                                <asp:TextBox ID="TBCompanyCity" name="web" type="text" class="form-poshytip" title="Enter your website" runat="server"></asp:TextBox>
 								<%--<input name="web"  id="web" type="text" class="form-poshytip" title="Enter your website" />--%>
 							</div>
-							<div>
-								<label>Comments</label>
-                                <asp:TextBox ID="TextBox4" name="comments" type="text" class="form-poshytip" title="Enter your comments" runat="server"></asp:TextBox>
-								<%--<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your comments"></textarea>--%>
-							</div>
+
+                            <div>
+                                 <asp:DropDownList ID="DDLcompanyServiceArea1" runat="server">
+                                    <asp:ListItem>שרון</asp:ListItem>
+                                    <asp:ListItem>חיפה</asp:ListItem>
+                                    <asp:ListItem>ירושלים</asp:ListItem>
+                                    <asp:ListItem>תל אביב</asp:ListItem>
+                                </asp:DropDownList>
+                            
+                            </div>
+
+                             <div>
+                                 <asp:DropDownList ID="DDLcompanyServiceArea2" runat="server">
+                                    <asp:ListItem>שרון</asp:ListItem>
+                                    <asp:ListItem>חיפה</asp:ListItem>
+                                    <asp:ListItem>ירושלים</asp:ListItem>
+                                    <asp:ListItem>תל אביב</asp:ListItem>
+                                </asp:DropDownList>
+                            
+                            </div>
+ 
 
                 <%--           
 
@@ -133,11 +173,15 @@
 						--%>	
                             <p></p>
 							
-                    
-
-                            <asp:FileUpload ID="FileUpload1" runat="server" />
-
-
+                          
+                            שירותי גננים 
+                            <asp:CheckBox ID="CBCompanyGanan" class="form-poshytip" runat="server" />
+                                <br />
+                             שירותי אדריכלים <asp:CheckBox ID="CBCompanyArch" class="form-poshytip" runat="server" />
+                           
+                            <asp:FileUpload ID="FileUploadPicture1" runat="server" />
+                            <br />
+                            <asp:Label ID="StatusLabel" runat="server" Text="עוד לא עלה קובץ לשרת"></asp:Label>
 
 						</fieldset>
 						<%--<p id="P1" class="warning">Message</p>--%>
@@ -147,13 +191,14 @@
 				</div>
 				<!-- ENDS column -->
 
-
-
-
-
-
-				<!-- page-content -->
-				<div id="page-content">
+  
+  
+  
+  				<!-- page-content -->
+             <div class="one-column">
+					<!-- form -->
+			 <h2></h2>
+			 <script type="text/javascript" src="js/form-validation.js"></script>
 					<h4 class="line-divider">Headers</h4>
 
                     <p></p>
@@ -165,13 +210,22 @@
                     <%--<p><input type="button" value="SEND" name="submit" id="submit" /></p>--%>
                     
 
+             
+              <form id="Form1" action="#" method="post">
+              <fieldset>
+                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                    <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+                    <asp:Image ID="Image1" runat="server" />
+              </fieldset>
+              </form>
+              </div>
 
 
 
 
 
-
-
+              <h4 class="line-divider">Headers</h4>
+              <div id="page-content">
 					<h1>Lorem ipsum dolor</h1>
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
 					
