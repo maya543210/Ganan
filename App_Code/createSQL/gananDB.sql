@@ -4,12 +4,13 @@
 select * from Products
 select * from Company --טבלת חברות של גננים
 select * from companyServiceArea --טבלת איזורים בארץ
-select * from gananDBCompanyServiceAreaCompany --טבלת גנן ואיזורים
+select * from GananCompanyServiceArea --טבלת גנן ואיזורים
 select * from CompanyPicture --טבלת תמונות
 
+DROP TABLE Company;
 DROP TABLE CompanyPicture;
-DROP TABLE gananDBCompanyServiceAreaCompany;
-DROP TABLE gananDBCompanyServiceAreaCompany;
+DROP TABLE GananCompanyServiceArea;
+DROP TABLE companyServiceArea;
 
 
 

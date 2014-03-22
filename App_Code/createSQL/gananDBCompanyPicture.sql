@@ -4,34 +4,52 @@ select * from CompanyPicture
 
 CREATE TABLE [CompanyPicture] (
 	[imageId] int IDENTITY NOT NULL , --מספר רץ של התמונות
-    [imageCompanyId] int not null , --מספר זיהוי של החברה
+    [companyId] int not null , --מספר זיהוי של החברה
     [imageUrl] varchar (50) NOT NULL, --URL
-	[imageDescription] varchar (150) null , --תיאור
-	FOREIGN KEY (imageCompanyId) REFERENCES Company(companyId),
+	[imageDescription] varchar (200) null , --תיאור
+	FOREIGN KEY (companyId) REFERENCES Company(companyId),
 	Primary key (imageId)
 )
-           
-INSERT INTO [dbo].[Company]
-           ([companyCode]
-           ,[companyName]
-           ,[companyPhoneAreaCode1]
-           ,[companyPhoneNumber1]
-           ,[companyPhoneAreaCode2]
-           ,[companyPhoneNumber2]
-           ,[companyCity]
-           ,[companyAddress]
-           ,[companyGanan]
-           ,[companyArch]
-           ,[companyDescs]
-           ,[companyEmail]
+
+drop table CompanyPicture;
+
+
+INSERT INTO [dbo].[CompanyPicture]
+           ([companyId]
+           ,[imageUrl]
+           ,[imageDescription]
            )
      VALUES
-           ('thina'
-           ,21
-           ,'images/Product/thina.jpg'
-           ,10
-           ,0
+           (
+           3
+           ,'images/images 3/5.jpg'
+           ,'גינה שעיצבנו ללקוח'
            )
 
+select * from CompanyPicture
 
+UPDATE CompanyPicture
+SET imageUrl='images/images 2/1.jpg'
+WHERE imageUrl='images/images 1/7.jpg';
+ 
+UPDATE CompanyPicture
+SET companyId=2
+WHERE companyId=1 and imageid=7;
+ 
+ select * from CompanyPicture
+          
+INSERT INTO [dbo].[CompanyPicture]
+           ([companyId]
+           ,[imageUrl]
+           ,[imageDescription]
+           )
+     VALUES
+           (2
+           ,'images/images 2/8.jpg'
+           ,'תמונה ממחישה'
+           )
+           
+ select * from CompanyPicture
+
+select companyLogoUrl from Company
 

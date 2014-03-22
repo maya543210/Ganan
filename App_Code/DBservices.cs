@@ -24,6 +24,11 @@ public class DBservices
 		//
 	}
 
+
+
+    //------------AYA BEGIN--------------
+
+
     public DBservices Read(string connectionSTR, string tableSTR)
     {
         DBservices dbsTMP = new DBservices(); //יצירת אובייקט זמני למתודה
@@ -72,4 +77,55 @@ public class DBservices
         con.Open();
         return con;
     }
+
+
+
+
+    //---------AYA END------------------
+
+
+    //----------YANIV BEGIN-------------
+
+    
+        public DataTable Get_Porflio_DB()
+        {
+            string myConnectionString = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString; //  Making a string for SqlConnection
+            using (SqlConnection myConnection = new SqlConnection (myConnectionString))     // Making a SqlConnection
+            {
+                myConnection.Open();
+                SqlCommand myCommand = new SqlCommand("select companyId, companyName, companyCity, companyDescs from Company", myConnection); // Pooling data using an sql command
+                using (SqlDataReader SqlReader = myCommand.ExecuteReader())
+                {
+                    DataTable Data_tbl = new DataTable();      // Making an empty Table for storing the command's results
+                    Data_tbl.Columns.Add("ID");
+                    Data_tbl.Columns.Add("Name");
+                    Data_tbl.Columns.Add("City");
+                    Data_tbl.Columns.Add("Descs");
+
+                    while (SqlReader.Read())    // Repeat for every instance/line in sql table
+                    {
+                        DataRow data_row = Data_tbl.NewRow();
+                        data_row["ID"] = SqlReader["companyId"];
+                        data_row["Name"] = SqlReader["companyName"];
+                        data_row["City"] = SqlReader["companyCity"];
+                        data_row["Descs"] = SqlReader["companyDescs"];
+                        Data_tbl.Rows.Add(data_row);
+                    }
+                    return(Data_tbl);
+                }
+             
+            }
+        }
+	
+
+//----------YANIV END-------------
+
+//---------MAYA BEGIN-----------
+
+//---------MAYA END-----------------
+
+
+
+
+
 }

@@ -36,12 +36,29 @@ INSERT INTO [dbo].[Company]
            ,[companyLogoUrl]
            )
      VALUES
-           ('thina'
-           ,21
-           ,'images/Product/thina.jpg'
-           ,10
+           (2468
+           ,'גננים מסי'
+           ,09
+           ,8975632
+           ,04
+           ,7958428
+           ,'צורן'
+           ,'הברוש 6'
+           ,1
            ,0
+           ,'חברת גננים בעלי ניסיון רב בתחום ועם יכולות מרשימות. מוזמנים לראות את התמונות שמדברות בעד עצמן'
+           ,'gananmessi@gmail.co.il'
+           ,'images/images 3/image logo/messi.jpg'
            )
+
+
+select companyLogoUrl from Company where companyId=3 
+
+UPDATE Company
+SET companyLogoUrl='images/images 3/image logo/messi.jpg'
+WHERE companyLogoUrl='images/images 2/image logo/messi.jpg';
+
+
 
 
 ALTER TABLE Company
