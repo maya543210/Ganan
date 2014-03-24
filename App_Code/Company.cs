@@ -127,7 +127,7 @@ public class Company
 
     public DataTable readDataDB()
     {
-        DBservices dbs = new DBservices(); //יצירת dbs חדש 
+        DBservicesA dbs = new DBservicesA(); //יצירת dbs חדש 
         dbs = dbs.Read("DBconnectionString","dbo.Cars");
         //לאחר החזרה מהמתודה בדי בי סרוויס, נשמור את האובייקט בסשיין
         //HttpContext.Current.Session["tmp"] = dbs;

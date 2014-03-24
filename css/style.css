@@ -32,14 +32,14 @@
      height:80px;
      width:80px;
      }
-  .ImageContact
+ /* .ImageContact
   {
       float:right;
       height:30px;
       width:30px;
       margin-left:5px;
       
-      }
+      }*/
      
      .div1
      {
@@ -58,6 +58,10 @@
           margin-left:15px;
           margin-top:40px;
           color:Green;
+          float:right;
+          height:30px;
+          width:30px;
+          margin-left:5px;
           }
          
      .DescDiv
@@ -73,7 +77,33 @@
           color:Yellow;
           width:20px;
           }
-          
+ /*Aya-Rating-----------------------------------------------------------------*/
+ 
+ /* Rating */
+.ratingStar {
+    font-size: 0pt;
+    width: 13px;
+    height: 12px;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+.filledRatingStar {
+    background-image: url(Images/FilledStar.png);
+
+}
+
+.emptyRatingStar {
+    background-image: url(Images/EmptyStar.png);
+}
+
+.savedRatingStar {
+    background-image: url(Images/SavedStar.png);
+}
+         
  /*Aya-Accordion---------------------------------------------------------------*/
 
     
@@ -120,7 +150,14 @@
  .ac
  {
      height:281px;
-     }        
+     margin-top:150px;
+     text-align:right;
+     } 
+     
+   /*  #Content2
+     {
+         height:95%;
+         }      */ 
 
 /* GENERAL ------------------------------------------------------------*/
 
@@ -219,7 +256,7 @@ body
 
 #page-title{
 	overflow: hidden;
-	height: 117px;
+	height: 557px;
 	padding-right:30px; /*maya*/
 	margin-bottom: 30px;
 	margin-top:15px; /*aya*/

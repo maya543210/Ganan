@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <link href="css/style.css" rel="stylesheet" type="text/css" /> 
+<link href="css/style.css" rel="stylesheet" type="text/css" /> 
 <!-- MAIN -->
 		<div id="main">  
 			
@@ -36,19 +36,14 @@
                      <div class="div2">
                     <asp:ImageButton ID="ImageButton1" CssClass="ContactDiv" ImageUrl="images/phone.GIF" runat="server" />
                     </div>
-
+<%--
 
  <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
  </ajaxToolkit:ToolkitScriptManager>
- 
 
- 
  <div class="ac">
  <asp:UpdatePanel ID="UpdatePanel2" runat="server">
  <ContentTemplate>
-     
-     <asp:ScriptManager ID="ScriptManager1" runat="server">
-     </asp:ScriptManager>
  <ajaxToolkit:Accordion ID="Accordion1" SelectedIndex="1" FadeTransitions="true"
   FramesPerSecond= "40" TransitionDuration="250" AutoSize="None"  
   CssClass="accordion"  HeaderCssClass="accordionHeader"  
@@ -85,52 +80,40 @@
                         </ajaxToolkit:Accordion>
                          </ContentTemplate>
                          </asp:UpdatePanel>
-                         </div>
-
-
-
-                       
+                         </div>--%>
 
  <br /> <br />  <br /> <br />
-<h4 class="line-divider">דירוג</h4>
+<h4 class="line-divider">דירוג </h4>
 
-<asp:ScriptManager ID="ScriptManager2" runat="server">
-     </asp:ScriptManager>
 
-      <asp:ScriptManager ID="sm" runat="server" />
+<asp:ScriptManager ID="sm" runat="server" />
     <div>
     <div class="demoarea">
       <div class="demoheading">Rating Demonstration </div>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
               <div style="float: left; width:230;">How much do you like ASP.NET AJAX ?</div>
-                <ajaxtoolit:Rating ID="LikeRating" runat="server" 
+                <ajaxtoolkit:Rating ID="LikeRating" runat="server" 
                     CurrentRating="3" 
                     MaxRating="5" 
                     StarCssClass="ratingStar" 
                     WaitingStarCssClass="savedRatingStar" 
                     FilledStarCssClass="filledRatingStar" 
                     EmptyStarCssClass="emptyRatingStar" 
-                    OnChanged="LikeRating_Changed" 
+                    OnChanged="" 
                     style="float: left;">
-                </ajaxtoolit:Rating>
+                </ajaxToolkit:Rating>
                 <br />
                 <div style="clear:left;">
                 <br />
                     <asp:Button ID="ButtonSubmit" runat="server" Text="Submit" 
                         onclick="ButtonSubmit_Click" /><br /><br />
-                    <asp:Label ID="LblResponse" runat="server" Text="[ No response provioded yet.]"></asp:Label>   
+                    <asp:Label ID="LabelResponse" runat="server" Text="[ No response provioded yet.]"></asp:Label>   
                 </div>
             </ContentTemplate>     
         </asp:UpdatePanel>   
     </div>
     </div>
-
-<asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-
-
-
-
     </div>
 </asp:Content>
 

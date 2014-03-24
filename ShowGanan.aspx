@@ -1,23 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ShowGanan.aspx.cs" Inherits="_ShowGanan" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
-<%--<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-</asp:Content>--%>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
  
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
- <link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" /> 
 
 
 		<!-- MAIN -->
-		<%--<div id="main">  סתם מיותר לי אבל לא רציתי למחוק 
+		<div id="main">  
 			
 			</div>
-			--%>
+			
 			<!-- content -->
-			<%--<div id="content">  סתם מיותר לי אבל לא רציתי למחוק
+			<div id="content">  
 				
 				</div>
-				--%>
+				
 
 				<!-- title -->
 				<div id="page-title">
@@ -33,7 +33,7 @@
 
                     <div class="div1">  <%--class div1 כדי להצמיד את האובייקטים לימין--%>
                     <h1 class="CompanyName">   <%--שם הגנן/ חברה--%>
-				    <asp:Label ID="LabelCompanyName" runat="server" Text=""></asp:Label>
+				    <asp:Label ID="LabelCompanyName" runat="server" Text=" "></asp:Label>
                     </h1> 
                     </div>
                     
@@ -43,17 +43,18 @@
                      <h6>אימייל</h6>
                      <asp:Label ID="LabelContactEmail" runat="server" Text="avi.levi@hotmail.com"></asp:Label>  אימייל הגנן
                     </div> --%>
+                    <div class="div2">
+                    <asp:ImageButton ID="ImageButton1" CssClass="ContactDiv" ImageUrl="images/phone.GIF" runat="server" />
+                    </div>
 
-                    <div class="ContactDiv">
-                     <%--<a href="https://www.google.co.il/?gws_rd=cr&ei=lxkBU_zeMqTa4wTctYDgCA" class="div2">--%>  <%--איך אני עושה את הקישור בלחיצה על התמונה? אירוע?--%>
+                   <%-- <div class="ContactDiv">
+                     <a href="https://www.google.co.il/?gws_rd=cr&ei=lxkBU_zeMqTa4wTctYDgCA" class="div2">  איך אני עושה את הקישור בלחיצה על התמונה? אירוע?
                        <img alt="" class="ImageContact" src="images/phone.GIF"  runat="server"/>
 
                        &nbsp;צור קשר
                      </div>
-                   <%-- </a> --%>
-                        
-                   
-				   </div>  
+                    </a> 
+				   </div>  --%>
         
         <%--<asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
@@ -73,18 +74,14 @@
 					</div> --%>
 					<%--<h4 class="line-divider">Headers</h4>--%>   <%--סתם מיותר לי אבל לא רציתי למחוק--%>
                     
-                    <%--<div id="companyDescription" class="DescDiv">--%>  <%--תיאור החברה--%>
-                        <%--<h6>על החברה</h6>--%>
-                        
-                       <%-- <h6>&nbsp;</h6>
-                        <asp:Label ID="LabelDescription" runat="server" Text="description"></asp:Label>--%>
+               
                         <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
                         </ajaxToolkit:ToolkitScriptManager>
 
                         <div class="ac">
                         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                         <ContentTemplate>
-                        <ajaxToolkit:Accordion ID="Accordion1" SelectedIndex="0" FadeTransitions="true"
+                        <ajaxToolkit:Accordion ID="Accordion1" SelectedIndex="1" FadeTransitions="true"
                         FramesPerSecond= "40" TransitionDuration="250" AutoSize="None"  
                         CssClass="accordion"  
                         HeaderCssClass="accordionHeader"  
@@ -349,9 +346,10 @@
 
 
                     
+    </div>
 </asp:Content>
 
-<asp:Content ID="Content3" runat="server" contentplaceholderid="head">
+<%--<asp:Content ID="Content3" runat="server" contentplaceholderid="head">
     </asp:Content>
-
+--%>
 

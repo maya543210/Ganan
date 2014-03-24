@@ -27,7 +27,7 @@ public class DBservicesY
 
         public DataTable Get_Porflio_DB()
         {
-            string myConnectionString = ConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString; //  Making a string for SqlConnection
+            string myConnectionString = WebConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString; //  Making a string for SqlConnection
             using (SqlConnection myConnection = new SqlConnection (myConnectionString))     // Making a SqlConnection
             {
                 myConnection.Open();
