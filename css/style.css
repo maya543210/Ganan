@@ -256,7 +256,7 @@ body
 
 #page-title{
 	overflow: hidden;
-	height: 557px;
+	height: 557px;  /*בעית גודל*  117 /
 	padding-right:30px; /*maya*/
 	margin-bottom: 30px;
 	margin-top:15px; /*aya*/
