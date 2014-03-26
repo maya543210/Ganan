@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 		<!-- MAIN -->
-		<div id="main">
+		<div id="main" dir="rtl">
 			
 			<!-- content -->
 			<div id="content">
@@ -33,11 +33,14 @@
 				<!-- Portfolio -->
 				<div id="projects-list">
 					
-					<!-- project -->
+                    <asp:PlaceHolder ID="placeholder_projects_list" runat="server"></asp:PlaceHolder>
+					
+                    <!-- project -->
 					<div class="project">
 						<h1><a href="#PTO">PTO Lorem ipsum dolor amet</a></h1>
 						
 						<!-- shadow -->
+                        
 						<div class="project-shadow">
 							<!-- project-thumb -->
 							<div class="project-thumbnail">
@@ -64,98 +67,7 @@
 					</div>
 					<!-- ENDS project -->
 					
-					<!-- project -->
-					<div class="project">
-						<h1><a href="project.html">Lorem ipsum dolor amet</a></h1>
-						
-						<!-- shadow -->
-						<div class="project-shadow">
-							<!-- project-thumb -->
-							<div class="project-thumbnail">
-								
-								<!-- meta -->
-								<ul class="meta">
-									<li><strong>Project date</strong> Dec 27th 2011 </li>
-									<li><strong>Client</strong> IBM</li> 
-									<li><strong>Visit website</strong> <a href="#">www.luiszuno.com</a></li>
-								</ul>
-								<!-- ENDS meta -->
-								
-								<a href="project.html" class="cover"><img src="img/dummies/438x267.gif"  alt="Feature image" /></a>
-							</div>
-							<!-- ENDS project-thumb -->
-							
-							<div class="the-excerpt">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
-							</div>	
-							<a href="project.html" class="read-more">View project</a>
-						
-						</div>
-						<!-- ENDS shadow -->
-					</div>
-					<!-- ENDS project -->
 
-					<!-- project -->
-					<div class="project">
-						<h1><a href="project.html">Lorem ipsum dolor amet</a></h1>
-						
-						<!-- shadow -->
-						<div class="project-shadow">
-							<!-- project-thumb -->
-							<div class="project-thumbnail">
-								
-								<!-- meta -->
-								<ul class="meta">
-									<li><strong>Project date</strong> Dec 27th 2011 </li>
-									<li><strong>Client</strong> IBM</li> 
-									<li><strong>Visit website</strong> <a href="#">www.luiszuno.com</a></li>
-								</ul>
-								<!-- ENDS meta -->
-								
-								<a href="project.html" class="cover"><img src="img/dummies/438x267.gif"  alt="Feature image" /></a>
-							</div>
-							<!-- ENDS project-thumb -->
-							
-							<div class="the-excerpt">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
-							</div>	
-							<a href="project.html" class="read-more">View project</a>
-						
-						</div>
-						<!-- ENDS shadow -->
-					</div>
-					<!-- ENDS project -->
-
-					<!-- project -->
-					<div class="project">
-						<h1><a href="project.html">Lorem ipsum dolor amet</a></h1>
-						
-						<!-- shadow -->
-						<div class="project-shadow">
-							<!-- project-thumb -->
-							<div class="project-thumbnail">
-								
-								<!-- meta -->
-								<ul class="meta">
-									<li><strong>Project date</strong> Dec 27th 2011 </li>
-									<li><strong>Client</strong> IBM</li> 
-									<li><strong>Visit website</strong> <a href="#">www.luiszuno.com</a></li>
-								</ul>
-								<!-- ENDS meta -->
-								
-								<a href="project.html" class="cover"><img src="img/dummies/438x267.gif"  alt="Feature image" /></a>
-							</div>
-							<!-- ENDS project-thumb -->
-							
-							<div class="the-excerpt">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
-							</div>	
-							<a href="project.html" class="read-more">View project</a>
-						
-						</div>
-						<!-- ENDS shadow -->
-					</div>
-					<!-- ENDS project -->
 
 				</div>
 				<!-- ENDS Portfolio -->

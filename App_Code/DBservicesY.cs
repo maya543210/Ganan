@@ -31,7 +31,7 @@ public class DBservicesY
             using (SqlConnection myConnection = new SqlConnection (myConnectionString))     // Making a SqlConnection
             {
                 myConnection.Open();
-                SqlCommand myCommand = new SqlCommand("select companyId, companyName, companyCity, companyDescs from Company", myConnection); // Pooling data using an sql command
+                SqlCommand myCommand = new SqlCommand("select companyId, companyName, companyCity, companyDescs, companyLogoUrl from Company", myConnection); // Pooling data using an sql command
                 using (SqlDataReader SqlReader = myCommand.ExecuteReader())
                 {
                     DataTable Data_tbl = new DataTable();      // Making an empty Table for storing the command's results
@@ -39,6 +39,7 @@ public class DBservicesY
                     Data_tbl.Columns.Add("Name");
                     Data_tbl.Columns.Add("City");
                     Data_tbl.Columns.Add("Descs");
+                    Data_tbl.Columns.Add("LogoUrl");
 
                     while (SqlReader.Read())    // Repeat for every instance/line in sql table
                     {
@@ -47,6 +48,7 @@ public class DBservicesY
                         data_row["Name"] = SqlReader["companyName"];
                         data_row["City"] = SqlReader["companyCity"];
                         data_row["Descs"] = SqlReader["companyDescs"];
+                        data_row["LogoUrl"] = SqlReader["companyLogoUrl"];
                         Data_tbl.Rows.Add(data_row);
                     }
                     return(Data_tbl);
