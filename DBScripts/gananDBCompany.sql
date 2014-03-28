@@ -52,6 +52,8 @@ INSERT INTO [dbo].[Company]
            )
 
 
+
+
 select companyLogoUrl from Company where companyId=3 
 
 UPDATE Company

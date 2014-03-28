@@ -68,16 +68,17 @@ public class DBservicesM
         catch (Exception ex)
         {
             // write to log
-            throw (ex);
+          throw (ex);
         }
 
         String cStr = BuildInsertCommand(comp);      // helper method to build the insert string
 
         cmd = CreateCommand(cStr, con);             // create the command
+        int numEffected = 0;
 
         try
         {
-            int numEffected = cmd.ExecuteNonQuery(); // execute the command
+            numEffected = cmd.ExecuteNonQuery(); // execute the command
             return numEffected;
         }
         catch (Exception ex)
@@ -106,8 +107,9 @@ public class DBservicesM
 
         StringBuilder sb = new StringBuilder();
         // use a string builder to create the dynamic string
-        String startCommand = "INSERT INTO Company ";
-        sb.AppendFormat("Values({0}, '{1}' ,{2}, {3}, {4}, {5}, '{6}', '{7}', {8}, {9}, '{10}', '{11}', '{12}')", 
+
+        String startCommand = "INSERT INTO [dbo].[Company] ([companyCode] ,[companyName] ,[companyPhoneAreaCode1] ,[companyPhoneNumber1] ,[companyPhoneAreaCode2] ,[companyPhoneNumber2],[companyCity],[companyAddress],[companyGanan] ,[companyArch] ,[companyDescs] ,[companyEmail],[companyLogoUrl])";
+        sb.AppendFormat("VALUES ({0}, '{1}' ,{2}, {3}, {4}, {5}, '{6}', '{7}', {8}, {9}, '{10}', '{11}', '{12}')", 
             comp.CompanyCode, //0
             comp.CompanyName, //1
             comp.CompanyPhone1.PhoneAreaCode, //2
@@ -123,7 +125,6 @@ public class DBservicesM
             comp.CompanyLogoUrl ) ; //12
 
         command = startCommand + sb.ToString();
-
 
         return command;
     }
@@ -172,7 +173,16 @@ public class DBservicesM
     }
 
 
-
+    //read from companyServiceArea
+    public DataTable readFromCompanyServiceArea()
+    {
+        DataTable dt = new DataTable();
+        DBservicesM dbs = new DBservicesM();
+        dbs = ReadFromDataBase("DBconnectionString", "select * from companyServiceArea");
+        dt = dbs.dt;
+        return dt;
+        
+    }
 
 
 /*
@@ -253,5 +263,6 @@ public class DBservicesM
     }
 
 */
+
 
 }

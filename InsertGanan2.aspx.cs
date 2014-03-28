@@ -123,9 +123,9 @@ public partial class _InsertGanan2 : System.Web.UI.Page
             company.CompanyCity = TBCompanyCity.Text;
             company.CompanyAddress = TBcompanyAddress.Text;
 
-            company.CompanyGanan = CBCompanyGanan.Checked;
-            company.CompanyArch = CBCompanyArch.Checked;
-
+            //company.CompanyGanan = CBCompanyGanan.Checked;
+            //company.CompanyArch = CBCompanyArch.Checked;
+        
             company.CompanyDescs = TBCompanyDescs.Text;
             company.CompanyEmail = TBCompanyEmail.Text;
 

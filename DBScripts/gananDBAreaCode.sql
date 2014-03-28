@@ -1,9 +1,9 @@
 
-select * from rating
+select * from PhoneAreaCode
 
-DROP TABLE Rating;
+DROP TABLE PhoneAreaCode;
 
-CREATE TABLE [rating] (
+CREATE TABLE [PhoneAreaCode] (
 	[ratingId] int IDENTITY NOT NULL Primary key , --מספר רץ של הדירוג
 	[companyId] int NOT NULL , --מספר של החברה
     [ratingCustomerFirstName] varchar (20) not null , --שם פרטי של המדרג
