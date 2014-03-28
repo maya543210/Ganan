@@ -36,7 +36,7 @@
 					<!-- form -->
 					<h2></h2>
 					<script type="text/javascript" src="js/form-validation.js"></script>
-					<form id="contactForm" action="#" method="post">
+					<form id="contactForm"  method="post">
 						<fieldset>
 							<div>
 

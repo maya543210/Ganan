@@ -1161,8 +1161,8 @@ h6{ font-size: 20px; }
 {
     width: 438px;
     float: right;
-    margin-left: 100px; /*maya*/
-    padding-right:100px; /*maya*/
+    margin-left: 120px; /*maya*/
+    padding-right:120px; /*maya*/
     direction:rtl;
 
 }
