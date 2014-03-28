@@ -73,13 +73,15 @@ public partial class Portfolio : System.Web.UI.Page
             HtmlGenericControl img = new HtmlGenericControl("img");
             img.Attributes.Add("src", row.Field<string>("LogoUrl"));
             img.Attributes.Add("alt", "Feature image");
+            img.Attributes.Add("width", "438");
+            img.Attributes.Add("height", "267");
             HtmlGenericControl div_the_excerpt = new HtmlGenericControl("div");
             div_the_excerpt.Attributes.Add("class", "the-excerpt");
             HtmlGenericControl p = new HtmlGenericControl("p");
             p.InnerText = row.Field<string>("Descs");
             HtmlGenericControl a_view = new HtmlGenericControl("a");
             a_view.Attributes.Add("herf", "project.html");
-            a_view.Attributes.Add("class", "cover");
+            a_view.Attributes.Add("class", "read-more");
             a_view.InnerText = "View project";
 
             // Adding HTML controls in order
