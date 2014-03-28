@@ -11,7 +11,7 @@
  <script type = "text/javascript">
 
  </script>--%>
-
+ 
 		<!-- MAIN -->
 		<div id="main">
 			
@@ -113,7 +113,7 @@
 					<!-- form -->
 					<h2></h2>
 					<script type="text/javascript" src="js/form-validation.js"></script>
-					<form id="contactForm" action="#" method="post">
+					<form id="commentform" action="#" method="post">
 						<fieldset>
 							<div>
 
@@ -178,8 +178,10 @@
                             <asp:CheckBox ID="CBCompanyGanan" class="form-poshytip" runat="server" />
                                 <br />
                              שירותי אדריכלים <asp:CheckBox ID="CBCompanyArch" class="form-poshytip" runat="server" />
-                           
-                            <asp:FileUpload ID="FileUploadPicture1" runat="server" />
+                           תמונת לוגו
+                            <asp:FileUpload ID="FUCompanyLogoUrl" runat="server" />
+                            <br />
+                            <asp:Label ID="Lerorr" runat="server" Text=""></asp:Label>
                             <br />
                             <asp:Label ID="StatusLabel" runat="server" Text="עוד לא עלה קובץ לשרת"></asp:Label>
 
@@ -206,7 +208,8 @@
                     <label>כל הפרטים המופיעים מטה הם פרטים אשר מילאתי ואני מאשר כי אין בהם חומר פוגע או אינו הולם</label>
 
                     <p></p>
-				    <p><asp:Button ID="Button1" value="SEND" name="submit" runat="server" Text="שלח פרטים" /></p>
+				    <p><asp:Button ID="Button1" value="SEND" name="submit" runat="server" 
+                            Text="שלח פרטים"/></p>
                     <%--<p><input type="button" value="SEND" name="submit" id="submit" /></p>--%>
                     
 

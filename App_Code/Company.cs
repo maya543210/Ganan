@@ -23,6 +23,7 @@ public class Company
     private string companyEmail; // מייל
     private List<string> companyServiceArea; // אזור שירות
     private List<Picture> companyListPicture; // רשימת תמונות של הגנן
+    private string companyLogoUrl;
 
 
     //-----------companyId---------
@@ -116,6 +117,12 @@ public class Company
         set { companyListPicture = value; }
     }
 
+    //--------------companyLogoUrl-------------
+    public string CompanyLogoUrl
+    {
+        get { return companyLogoUrl; }
+        set { companyLogoUrl = value; }
+    }
 
 
 	public Company()
@@ -125,6 +132,7 @@ public class Company
 		//
 	}
 
+    //--------aya end-------------
     public DataTable readDataDB()
     {
         DBservicesA dbs = new DBservicesA(); //יצירת dbs חדש 
@@ -133,4 +141,65 @@ public class Company
         //HttpContext.Current.Session["tmp"] = dbs;
         return dbs.dt;
     }
+
+    //----------aya start ------------
+
+
+    //-----------maya start-----------
+
+/*
+
+    public void updateTable()
+    {
+
+        if (HttpContext.Current.Session["companyDataSet"] == null) return;
+
+        DBservicesM dbs = (DBservicesM)HttpContext.Current.Session["companyDataSet"];       
+        DataRow data_row = dbs.dt.NewRow();
+        data_row["ID"] = "companyId";
+        data_row["Name"] = "companyName";
+        data_row["City"] = "companyCity";
+        data_row["Descs"] = "companyDescs";
+        data_row["LogoUrl"] = "companyLogoUrl";
+        dbs.dt.Rows.Add(data_row);
+        //data_row==dr in cars
+
+    }
+
+
+
+    //---------------------------------------------------------------------------------
+    // update the database
+    //---------------------------------------------------------------------------------
+    public void updateDatabase()
+    {
+
+        if (HttpContext.Current.Session["companyDataSet"] == null) return;
+
+        DBservicesM dbs = (DBservicesM)HttpContext.Current.Session["companyDataSet"];
+
+        dbs.Update();
+
+    }
+
+
+    public DataTable getTableFromSession(string sessionName)
+    {
+
+        if (HttpContext.Current.Session[sessionName] != null)
+        {
+            DBservicesM dbs = (DBservicesM)(HttpContext.Current.Session[sessionName]);
+            return dbs.dt;
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+*/
+
+    //------------maya end----------
+
 }
