@@ -1,6 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Portfolio.aspx.cs" Inherits="Portfolio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+    <script type="text/javascript" src="js/jquery.quicksearch.js"></script>
+    <script type="text/javascript"  src="js/eetv_tools.js"></script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -17,8 +21,25 @@
 				</div>
 				<!-- ENDS title -->
 				
+                <!-- quicksearch -->
+                    <form id="searchform" action="#">
+                    <input type="text" name="search" value="" id="id_search" placeholder="חיפוש" />
+                    </form>
+				<!-- ENDS quicksearch -->
+
 				<!-- filter -->
-				<ul class="filter">
+                <div id="menulist">
+                    <ul class="filter">
+
+                       <li></li>
+                       <li> <a class="menu menu_active" id="all" href="#all.html">כל הפרוייקטים</a> </li>
+                       <li> <a class="menu" id="BA" href="#BA.html">מנהל עסקים</a> </li>
+                       <li> <a class="menu" id="IE" href="#IE.html">תעשייה וניהול</a> </li>
+                    </ul>
+                </div>
+
+                    <%--Yaniv Commented out the Filter--%>
+<%--				<ul class="filter">
 					<li>Categories</li>
 		    		<li><a href="#" > Webdesign </a></li>
 		    		<li class="active"><a href="#PTO" > Photography </a></li>
@@ -28,8 +49,8 @@
 		    		<li><a href="#" > Gaming </a></li>
 		    		<li><a href="#" > Coding </a></li>
 		    	</ul>
-				<!-- ENDS filter -->
-				
+				<!-- ENDS filter -->--%>
+                
 				<!-- Portfolio -->
 				<div id="projects-list">
 					

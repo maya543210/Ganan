@@ -17,8 +17,8 @@ public class Company
     private Phone companyPhone2; // מספר טלפון2
     private string companyCity; // עיר של החברה
     private string companyAddress; // כתובת: רחוב, מספר בית
-    private bool companyGanan; // גננים?
-    private bool companyArch; // אדריכלים?
+    private int companyGanan; // גננים?
+    private int companyArch; // אדריכלים?
     private string companyDescs; // תיאור קצר של החברה
     private string companyEmail; // מייל
     private List<string> companyServiceArea; // אזור שירות
@@ -76,14 +76,14 @@ public class Company
     }
 
     //-----------companyGanan-----------
-    public bool CompanyGanan
+    public int CompanyGanan
     {
         get { return companyGanan; }
         set { companyGanan = value; }
     }
 
     //--------------companyArch---------
-    public bool CompanyArch
+    public int CompanyArch
     {
         get { return companyArch; }
         set { companyArch = value; }

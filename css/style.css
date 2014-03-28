@@ -696,7 +696,8 @@ h6{ font-size: 20px; }
 	line-height: 2em;
 	position: absolute;
 	top:30px;
-	left: 30px;
+    padding-right: 10px;
+	/* left: 30px; Yaniv */
 }
 
 #projects-list .project .read-more{
@@ -1161,8 +1162,8 @@ h6{ font-size: 20px; }
 {
     width: 438px;
     float: right;
-    margin-left: 120px; /*maya*/
-    padding-right:120px; /*maya*/
+    margin-left: 100px; /*maya*/
+    padding-right:100px; /*maya*/
     direction:rtl;
 
 }

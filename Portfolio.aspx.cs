@@ -60,13 +60,18 @@ public partial class Portfolio : System.Web.UI.Page
             HtmlGenericControl div_shadow = new HtmlGenericControl("div");
             div_shadow.Attributes.Add("class", "project-shadow");
             HtmlGenericControl div_thumbnail = new HtmlGenericControl("div");
+            div_thumbnail.Attributes.Add("dir", "rtl");
             div_thumbnail.Attributes.Add("class", "project-thumbnail");
             HtmlGenericControl ul_meta = new HtmlGenericControl("ul");
             ul_meta.Attributes.Add("class", "meta");
             HtmlGenericControl li_meta = new HtmlGenericControl("li");
-            HtmlGenericControl strong = new HtmlGenericControl("strong");
-            strong.InnerText = "עיר:";
-            li_meta.InnerText = row.Field<string>("City");
+            //HtmlGenericControl strong = new HtmlGenericControl("strong");
+
+            
+            //strong.InnerText = "עיר: ";
+
+            li_meta.InnerText = "עיר: " + row.Field<string>("City");
+
             HtmlGenericControl a_img = new HtmlGenericControl("a");
             a_img.Attributes.Add("herf", "project.html");
             a_img.Attributes.Add("class", "cover");
@@ -85,9 +90,8 @@ public partial class Portfolio : System.Web.UI.Page
             a_view.InnerText = "View project";
 
             // Adding HTML controls in order
-
             // setting the div-thumbnail
-            li_meta.Controls.Add(strong);
+            //li_meta.Controls.Add(strong);
             ul_meta.Controls.Add(li_meta);
             div_thumbnail.Controls.Add(ul_meta);
             a_img.Controls.Add(img);
