@@ -19,6 +19,22 @@ public partial class _InsertGanan : System.Web.UI.Page
         DBservicesM dBservicesM = new DBservicesM();
         DataTable dt = new DataTable();
         dt = dBservicesM.readFromCompanyServiceArea();
+
+        DDLcompanyServiceArea1.Items.Clear();
+        DDLcompanyServiceArea2.Items.Clear();
+
+        //first ddl
+        ListItem li1 = new ListItem();
+        li1.Text = "בחר"; 
+        li1.Value = "-1";
+        DDLcompanyServiceArea1.Items.Add(li1);
+
+        //secound ddl
+        ListItem li2 = new ListItem();
+        li2.Text = "בחר"; //עמודה 1
+        li2.Value = "-1";
+        DDLcompanyServiceArea2.Items.Add(li2);
+
         foreach (DataRow row in dt.Rows)
         {
             ListItem li = new ListItem(); // שורה בDDL
@@ -39,6 +55,17 @@ public partial class _InsertGanan : System.Web.UI.Page
         }
 
         /*
+        --------------aya code--------------------
+        dt = dBservicesM.readCompanyPicture_imageId_imageUrl(2);
+        foreach (DataRow row in dt.Rows)
+        {
+            ListItem li = new ListItem(); // שורה בDDL
+            Lmaya.Text = Lmaya.Text + row.ItemArray[0].ToString() + "   ";
+            Lmaya.Text = Lmaya.Text + row.ItemArray[1].ToString() + "<br/>";
+        }
+        */                    
+
+        /*
         List<string> listString = new List<string>();
         dt = dBservicesM.readFromCompanyServiceArea();
         foreach (DataRow row in dt.Rows)
@@ -49,8 +76,6 @@ public partial class _InsertGanan : System.Web.UI.Page
 
         //=========read only last id============
 
-
-        //Response.Write("מאיה קידר");
         /*
         DBservicesM myDBservices = new DBservicesM();
         DataTable myDataTable = myDBservices.readID();

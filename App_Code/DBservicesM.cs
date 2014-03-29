@@ -184,85 +184,27 @@ public class DBservicesM
         
     }
 
-
-/*
-    public DataTable readID()
+    //------- for aya------ enjoy------
+    public DataTable readCompanyPicture_imageId_imageUrl(int companyId)
     {
-        string myConnectionString = WebConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString; //  Making a string for SqlConnection
-        using (SqlConnection myConnection = new SqlConnection(myConnectionString))     // Making a SqlConnection
-        {
-            myConnection.Open();
-            SqlCommand myCommand = new SqlCommand("select companyId from Company", myConnection); // Pooling data using an sql command
-            using (SqlDataReader SqlReader = myCommand.ExecuteReader())
-            {
-                DataTable Data_tbl = new DataTable();      // Making an empty Table for storing the command's results
-                Data_tbl.Columns.Add("ID");
-               
-
-                while (SqlReader.Read())    // Repeat for every instance/line in sql table
-                {
-                    DataRow data_row = Data_tbl.NewRow();
-                    data_row["ID"] = SqlReader["companyId"];
-                   
-                    Data_tbl.Rows.Add(data_row);
-                }
-                return (Data_tbl);
-            }
-
-        }
+        DataTable dt = new DataTable();
+        DBservicesM dbs = new DBservicesM();
+        dbs = ReadFromDataBase("DBconnectionString", "select CompanyPicture.imageId, CompanyPicture.imageUrl from CompanyPicture, Company where CompanyPicture.companyId=Company.companyId and Company.companyId=" + companyId + ";");
+        dt = dbs.dt;
+        return dt;
+        
     }
 
-*/
-
-
-/*
-
-    //---------------------------------------------------------------------------------
-    // update the dataset into the database
-    //---------------------------------------------------------------------------------
-    public void Update()
+    //----- for yaniv-------- enjoy------
+    public DataTable readFromcompanyServiceArea_companyId_to_companyServiceAreaName(int companyId)
     {
-        // the command build will automatically create insert/update/delete commands according to the select command
-        SqlCommandBuilder builder = new SqlCommandBuilder(da);
-        da.Update(dt);
+        DataTable dt = new DataTable();
+        DBservicesM dbs = new DBservicesM();
+        dbs = ReadFromDataBase("DBconnectionString", "select companyServiceArea.companyServiceAreaName from GananCompanyServiceArea, companyServiceArea where companyServiceArea.companyServiceAreaId= GananCompanyServiceArea.companyServiceAreaId and GananCompanyServiceArea.companyId="+companyId);
+        dt = dbs.dt;
+        return dt;
+        
     }
-*/
-
-/* yaniv idea
- 
-    public DataTable readData()
-    {
-        string myConnectionString = WebConfigurationManager.ConnectionStrings["DBconnectionString"].ConnectionString; //  Making a string for SqlConnection
-        using (SqlConnection myConnection = new SqlConnection(myConnectionString))     // Making a SqlConnection
-        {
-            myConnection.Open();
-            SqlCommand myCommand = new SqlCommand("select companyId, companyName, companyCity, companyDescs, companyLogoUrl from Company", myConnection); // Pooling data using an sql command
-            using (SqlDataReader SqlReader = myCommand.ExecuteReader())
-            {
-                DataTable Data_tbl = new DataTable();      // Making an empty Table for storing the command's results
-                Data_tbl.Columns.Add("ID");
-                Data_tbl.Columns.Add("Name");
-                Data_tbl.Columns.Add("City");
-                Data_tbl.Columns.Add("Descs");
-                Data_tbl.Columns.Add("LogoUrl");
-
-                while (SqlReader.Read())    // Repeat for every instance/line in sql table
-                {
-                    DataRow data_row = Data_tbl.NewRow();
-                    data_row["ID"] = SqlReader["companyId"];
-                    data_row["Name"] = SqlReader["companyName"];
-                    data_row["City"] = SqlReader["companyCity"];
-                    data_row["Descs"] = SqlReader["companyDescs"];
-                    data_row["LogoUrl"] = SqlReader["companyLogoUrl"];
-                    Data_tbl.Rows.Add(data_row);
-                }
-                return (Data_tbl);
-            }
-
-        }
-    }
-
-*/
 
 
 }

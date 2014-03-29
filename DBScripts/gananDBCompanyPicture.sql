@@ -53,3 +53,13 @@ INSERT INTO [dbo].[CompanyPicture]
 
 select companyLogoUrl from Company
 
+select CompanyPicture.imageId, CompanyPicture.imageUrl
+from CompanyPicture, Company
+where CompanyPicture.companyId=Company.companyId and Company.companyId=1;
+
+
+select companyServiceArea.companyServiceAreaName
+from GananCompanyServiceArea, companyServiceArea
+where companyServiceArea.companyServiceAreaId= GananCompanyServiceArea.companyServiceAreaId 
+and GananCompanyServiceArea.companyId=2
+
