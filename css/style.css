@@ -77,6 +77,36 @@
           color:Yellow;
           width:20px;
           }
+          
+      #LeftDiv
+      {
+          width: 438px;
+	 float: left;
+	margin-left: 30px;
+          }
+          
+      #RightDiv
+      {
+          width: 438px;
+	float: left;
+	margin-left: 30px;
+          }
+          
+      .tabs
+      {
+         
+          float:right;
+          height:60px;
+          }
+          
+      .panes
+      {
+         /* margin-top:20px;*/
+          padding-top:50px;
+          height:80px;
+          /*text-align:right;*/
+       
+          }
  /*Aya-Rating-----------------------------------------------------------------*/
  
  /* Rating */
@@ -139,6 +169,11 @@
             padding: 5px;  
             padding-top: 10px;  
         } 
+        
+       .accordion
+       {
+           
+       }
         
  .Link
  {
@@ -637,7 +672,7 @@ h6{ font-size: 20px; }
 /* PAGES --------------------------------------------------------*/
 
 #page-content{
-	float: left;
+	float: right;
 	width: 906px;
 	margin-left: 30px;
 	text-align:right;

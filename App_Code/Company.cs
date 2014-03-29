@@ -136,13 +136,64 @@ public class Company
     public DataTable readDataDB()
     {
         DBservicesA dbs = new DBservicesA(); //יצירת dbs חדש 
-        dbs = dbs.Read("DBconnectionString","dbo.Cars");
+        dbs = dbs.ReadFromDataBase("DBconnectionString", "dbo.Cars");
         //לאחר החזרה מהמתודה בדי בי סרוויס, נשמור את האובייקט בסשיין
         //HttpContext.Current.Session["tmp"] = dbs;
         return dbs.dt;
     }
 
     //----------aya start ------------
+
+    public DataSet readCompanyDB()
+    {
+        DBservicesA dbs = new DBservicesA();
+        dbs = dbs.ReadFromDataBase("DBconnectionString", "dbo.Company");
+        // save the dataset in a session object
+
+        //HttpContext.Current.Session["carsDataSet"] = dbs;
+
+
+        return dbs.ds;
+    }
+
+    public DataTable readCompanyDBRate()
+    {
+        DBservicesA dbs = new DBservicesA();
+        dbs = dbs.ReadFromDataBase("DBconnectionString", "dbo.rating");
+        // save the dataset in a session object
+
+        //HttpContext.Current.Session["carsDataSet"] = dbs;
+
+
+        return dbs.dt;
+    }
+
+
+    public DBservicesA readCompanyDB_Area()
+    {
+        DBservicesA dbs = new DBservicesA();
+        dbs = dbs.ReadFromDataBase_1("DBconnectionString", "dbo.GananCompanyServiceArea ", "dbo.companyServiceArea");
+        // save the dataset in a session object
+
+        //HttpContext.Current.Session["carsDataSet"] = dbs;
+
+
+        return dbs;
+    }
+
+
+    public DataTable readComp()
+    {
+        DBservicesA dbs = new DBservicesA();
+        dbs = dbs.ReadFromDataBase("DBconnectionString", "dbo.Company");
+        // save the dataset in a session object
+
+        //HttpContext.Current.Session["carsDataSet"] = dbs;
+
+
+        return dbs.dt;
+
+    }
 
 
     //-----------maya start-----------

@@ -16,45 +16,45 @@ public class DBservicesA
 {
     public SqlDataAdapter da;
     public DataTable dt;
-
+    public DataSet ds;
     public DBservicesA()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
-
-
-
-
-
-    public DBservicesA Read(string connectionSTR, string tableSTR)
     {
-        DBservicesA dbsTMP = new DBservicesA(); //יצירת אובייקט זמני למתודה
+        //
+        // TODO: Add constructor logic here
+        //
+    }
+
+
+    public DBservicesA ReadFromDataBase(string conString, string tableName)
+    {
+        DBservicesA dbS = new DBservicesA(); // create a helper class
         SqlConnection con = null;
+
         try
         {
-            con = connect(connectionSTR);//פתיחת הקשר למסד נתונים
-            string commandSTR = "SELECT * FROM " + tableSTR; //יצירת הפקודה למסד הנתונים
-            SqlDataAdapter da = new SqlDataAdapter(commandSTR, con);//יצירת דטה אדפטר
-            DataSet ds = new DataSet();//יצירת דטהסט חדש
-            da.Fill(ds);//הכנסת נתונים אל תוך DataTable
-            DataTable dt = ds.Tables[0];//טבלה במיקום ה-0 במסד הנתונים היא הטבלה שאנו רוצים אל תוך ה-dt
-            
-            //נוסיף את הדטהטבל ודטה אדפטר אל תוך הדטהבייס סרוויס הזמני במטרה לשלוח אותו חזרה..
-            dbsTMP.dt = dt;
-            dbsTMP.da = da;
+            con = dbS.connect(conString); // open the connection to the database/
 
+            String selectStr = "SELECT * FROM " + tableName; // create the select that will be used by the adapter to select data from the DB
 
-            return dbsTMP;
+            SqlDataAdapter da = new SqlDataAdapter(selectStr, con); // create the data adapter
+
+            DataSet ds = new DataSet(); // create a DataSet and give it a name (not mandatory) as defualt it will be the same name as the DB
+            da.Fill(ds, "dbo.Company");                        // Fill the datatable (in the dataset), using the Select command
+
+            DataTable dt = ds.Tables[0];
+
+            // add the datatable and the dataa adapter to the dbS helper class in order to be able to save it to a Session Object
+            dbS.dt = dt;
+            dbS.da = da;
+            dbS.ds = ds;
+
+            return dbS;
         }
-
-        catch(Exception ex)
+        catch (Exception ex)
         {
-           //לכתוב משהו.. על השגיאה
-            throw (ex);
+            // write to log
+            throw ex;
         }
-
         finally
         {
             if (con != null)
@@ -62,11 +62,53 @@ public class DBservicesA
                 con.Close();
             }
         }
-
     }
 
-//    /--------יצירת קשר למסד הנתונים--------------------------------/
 
+
+
+    public DBservicesA ReadFromDataBase_1(string conString, string tableName1, string tableName2)
+    {
+        DBservicesA dbS_tmp = new DBservicesA(); // create a helper class
+        SqlConnection con = null;
+
+        try
+        {
+            con = dbS_tmp.connect(conString); //connect to db
+
+            String selectStr = "SELECT * FROM " + tableName1 + "," + tableName2 + " where " + tableName1 +".companyId =1 and " + tableName1 + ".companyServiceAreaId = " + tableName2 + ".companyServiceAreaId"; // create the select that will be used by the adapter to select data from the DB
+         
+            SqlDataAdapter da = new SqlDataAdapter(selectStr, con); //  dataAdapter
+
+            DataSet ds = new DataSet(); // create DataSet 
+            da.Fill(ds, "dbo.Company");// Fill the datatable (in the dataset)
+
+            DataTable dt = ds.Tables[0];
+
+            // add the datatable and the dataa adapter to the dbS helper class in order to be able to save it to a Session Object
+            dbS_tmp.dt = dt;
+            dbS_tmp.da = da;
+            dbS_tmp.ds = ds;
+
+            return dbS_tmp;
+        }
+        catch (Exception ex)
+        {
+            // write to log
+            throw ex;
+        }
+        finally
+        {
+            if (con != null)
+            {
+                con.Close();
+            }
+        }
+    }
+
+
+
+    /*CREATE CONNECTION TO DB*/
     public SqlConnection connect(String conString)
     {
 
@@ -76,11 +118,6 @@ public class DBservicesA
         con.Open();
         return con;
     }
-
-
-
-
-
 
 
 }

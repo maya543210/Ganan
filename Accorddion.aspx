@@ -32,7 +32,7 @@
 				<!-- page-content -->
 				<div id="Div1">
 					
-					<div class="accordion">
+					<%--<div class="accordion">
 						<h6><a href="#">Section 1</a></h6>
 						<div>
 							<p>
@@ -79,7 +79,7 @@
 							inceptos himenaeos.
 							</p>
 						</div>
-					</div>
+					</div>--%>
 					
 	
     
@@ -113,7 +113,9 @@
 		    	</ul>
 				<!-- ENDS filter -->
 				
+            <%--  ---------------------Aya-Left--------------------------------------------------%>  
 
+             <div id="LeftDiv">
 				<!-- project column (left)-->
 				<div class="project-column">
 					<!-- shadow -->
@@ -130,9 +132,14 @@
 					<!-- ENDS shadow -->
 				</div>
 				<!-- ENDS project column (left)-->
-				
+			  </div>
+              <%------------------ends Aya-Left----------------------------------------------------------------%>
+
+
+                <%--  ---------------------Aya-Right--------------------------------------------------%>  
 				<!--project column (right) -->
-				<div class="project-column">
+                <div id="RightDiv">
+				<%--<div class="project-column">
 					<h1 class="project-title">Lorem ipsum dolor amet</h1>
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
@@ -147,7 +154,48 @@
 						<li><a href="img/dummies/204x148.gif" class="fancybox"><img src="img/dummies/204x148.gif" alt="Pic"></a></li>
 					</ul>
 					<!-- ENDS project gallery -->
-				</div>
+				</div>--%>
+
+
+
+                	<div class="accordion" dir="rtl">
+						<h6><a href="#"> על החברה</a></h6>
+						<div>
+							
+						     <asp:PlaceHolder ID="Label_Descr" runat="server"></asp:PlaceHolder>
+							
+						</div>
+						<h6><a href="#"> כתובת</a></h6>
+						<div>
+                        <asp:PlaceHolder ID="PH_Address" runat="server"></asp:PlaceHolder>
+                        <br />
+	
+						</div>
+						<h6><a href="#"> איזור שירות</a></h6>
+						<div>
+							<asp:Label ID="Label_SrvArea" runat="server" Text=" "></asp:Label>
+						</div>
+						<h6><a href="#">Section 4</a></h6>
+						<div>
+							<p>
+							Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+							et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+							faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+							mauris vel est.
+							</p>
+							<p>
+							Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+							Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+							inceptos himenaeos.
+							</p>
+						</div>
+					</div>
+
+                </div>
+            <%--    --------------------ends Aya-Right------------------------------------------------------------%>
+
+
+
 				<div class="clear"></div>
 				<!-- ENDS project column (right) -->
 				
@@ -177,20 +225,49 @@
 			<!-- ENDS content -->
 	           
 
-
-
-
-
-
-
-
-              <br />
-              <br />
-
-
-              <h4 class="line-divider">Headers</h4>
+               <br /> <br />  <br /> <br />
+              
               <div id="page-content">
-					<h1>Lorem ipsum dolor</h1>
+              <!-- TABS -->
+					<!-- the tabs -->
+					<ul class="tabs">
+					    <li><a href="#">דרג </a></li>
+						<li><a href="#">דירוג</a></li>
+						<li><a href="#">חוות-דעת</a></li>					
+					</ul>
+					
+					<!-- tab "panes" -->
+					<div class="panes">
+					
+						<!-- tab 1 content  -->
+						<div>
+							
+						<asp:PlaceHolder ID="PH_Rate" runat="server">
+                            </asp:PlaceHolder>
+
+						</div>
+						<!-- ENDS tab 1 content -->
+						
+						<!-- tab 2 content  -->
+						<div>
+						  	<asp:ScriptManager ID="ScriptManager1" runat="server">
+                            </asp:ScriptManager>
+						</div>
+						<!-- ENDS tab 2 content -->
+						
+						<!-- tab 3 content  -->
+						<div>
+							<asp:Label ID="Label_Opinion" runat="server" Text="Label"></asp:Label>
+						</div>
+						<!-- ENDS tab 3 content -->
+						
+					</div>
+					<!-- ENDS TABS -->
+
+
+
+
+				<%--	<h1>Lorem ipsum dolor</h1>
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames, Pellentesque habitant morbi tristique senectus et netus et malesuada fames Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
 					
 					<h2>Lorem ipsum dolor</h2>
@@ -337,7 +414,7 @@
 						</tbody>
 					</table>
 					<!-- ENDS table -->
-					
+					--%>
 					
 				</div>
 				<!-- ENDS page-content -->
@@ -348,13 +425,13 @@
 			<!-- ENDS content -->
 			
 			<!-- Twitter -->
-			<div id="twitter">
+			<%--<div id="twitter">
 				<a href="#" id="prev-tweet"></a>
 				<a href="#" id="next-tweet"></a>
 				<div id="tweets">
 					<ul class="tweet_list"></ul>
 				</div>
-			</div>
+			</div>--%>
 			<!-- ENDS Twitter -->
 
 
@@ -362,5 +439,6 @@
 		<!-- ENDS MAIN -->
 
 
+    </div>
 </asp:Content>
 
